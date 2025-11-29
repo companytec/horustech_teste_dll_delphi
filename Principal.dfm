@@ -2931,7 +2931,7 @@ object Form1: TForm1
         Width = 141
         Height = 21
         TabOrder = 0
-        Text = '192.168.0.74'
+        Text = '192.168.0.71'
       end
       object Button30: TButton
         Left = 2

@@ -571,7 +571,20 @@ var
 begin
   ab2 := LeAbFid2Fix;
   EditString.Text := ab2.st_full;
-  Memo8.Lines.Add(ab2.st_full);
+
+
+    Memo8.Lines.Add('total_dinheiro: ' + floattostr(ab2.total_dinheiro));
+    Memo8.Lines.Add('total_litros: ' + floattostr(ab2.total_litros));
+    Memo8.Lines.Add('PU: ' + floattostr(ab2.PU));
+    Memo8.Lines.Add('tempo: ' + ab2.tempo);
+    Memo8.Lines.Add('canal: ' + ab2.canal);
+    Memo8.Lines.Add('data: ' + ab2.data);
+    Memo8.Lines.Add('hora: ' + ab2.hora);
+    Memo8.Lines.Add('registro: ' + inttostr(ab2.registro));
+    Memo8.Lines.Add('encerrante: ' + floattostr(ab2.encerrante));
+    Memo8.Lines.Add('tag: ' + ab2.tag);
+    Memo8.Lines.Add('tag2: ' + ab2.tag2);
+    Memo8.Lines.Add('st_full: ' + ab2.st_full);
 
 //  ab := LeAbastecimentoTWC;
 end;
@@ -1574,24 +1587,25 @@ end;
 procedure TForm1.Button40Click(Sender: TObject);
 //---------------------------------------------------------
 //função antiga e que funciona
-//var
-//  timeout: Integer;
-//  comm: PAnsiChar;
-//begin
-//
-//  comm := PAnsiChar(AnsiString(Edit29.Text));
-//  timeout := StrToInt(Edit36.Text);
-//  SendReceiveText(comm, timeout);
-//
-//  Edit35.Text := comm;
+var
+  timeout: Integer;
+  comm: PAnsiChar;
+begin
+
+  comm := PAnsiChar(AnsiString(Edit29.Text));
+  timeout := StrToInt(Edit36.Text);
+  SendReceiveText(comm, timeout);
+
+  Edit35.Text := comm;
 //---------------------------------------------------------
 // Meus testes para o paraguai
 //---------------------------------------------------------
-var
-  retorno: PChar;
-begin
-  retorno := HRSGetSalePAF();
-  edit35.text := retorno;
+//var
+//  retorno: PChar;
+//begin
+//  retorno := HRSGetSalePAF();
+//  edit35.text := retorno;
+//---------------------------------------------------------
 end;
 
 procedure TForm1.Button41Click(Sender: TObject);
