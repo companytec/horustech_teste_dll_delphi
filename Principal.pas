@@ -608,10 +608,10 @@ begin
   EditTotaisDin.Text := floattostr(ab.total_dinheiro);
   EditCanal.Text := ab.codbico;
   EditPPL.Text := floattostr(ab.PU);
-  EditData.Text := DateToStr(ab.datetime);//.Substring(0, 10); Comentado por erro no tal do Record
-  // String( ab.data).Substring(1,8) ;
-  EditHora.Text := Format('%.2d:%.2d', [myHour, myMin]);
-  EditTempo.Text := inttostr(ab.tempo);
+//  EditData.Text := DateToStr(ab.datetime);//.Substring(0, 10); Comentado por erro no tal do Record
+//   String( ab.data).Substring(1,8) ;
+  EditHora.Text := ab.hora;
+//  EditTempo.Text := inttostr(ab.tempo);
   EditEnc.Text := floattostr(ab.encerranteI) + ' / ' +
     floattostr(ab.encerranteF);
   EditRegistro.Text := inttostr(ab.registro);
@@ -943,6 +943,7 @@ var
 begin
   try
     ab := LeAbastecimentoPAF1;
+
     if ab.value = false then
     begin
       memo_AbastPaf1.Lines.Add('(0)');
@@ -951,23 +952,60 @@ begin
     else
     begin
       memo_AbastPaf1.Lines.Add('--------------------------------------------------------------------------');
+
       if ab.value then
         memo_AbastPaf1.Lines.Add('value: TRUE')
       else
         memo_AbastPaf1.Lines.Add('value: FALSE');
-      memo_AbastPaf1.Lines.Add(ab.st_full);
+
+        memo_AbastPaf1.Lines.Add('st_full: ' + ab.st_full);
+        memo_AbastPaf1.Lines.Add('total_dinheiro: ' + FloatToStr(ab.total_dinheiro));
+        memo_AbastPaf1.Lines.Add('total_litros: ' + FloatToStr(ab.total_litros));
+        memo_AbastPaf1.Lines.Add('PU: ' + FloatToStr(ab.PU));
+        memo_AbastPaf1.Lines.Add('tempo: ' + ab.tempo);
+        memo_AbastPaf1.Lines.Add('codbico: ' + ab.codbico);
+        memo_AbastPaf1.Lines.Add('numbico: ' + IntToStr(ab.numbico));
+        memo_AbastPaf1.Lines.Add('numtanque: ' + IntToStr(ab.numtanque));
+        memo_AbastPaf1.Lines.Add('voltanque: ' + IntToStr(ab.voltanque));
+        memo_AbastPaf1.Lines.Add('codcombustivel: ' + IntToStr(ab.codcombustivel));
+        memo_AbastPaf1.Lines.Add('seriecbc: ' + IntToStr(ab.seriecbc));
+        memo_AbastPaf1.Lines.Add('tipocbc: ' + ab.tipocbc);
+        memo_AbastPaf1.Lines.Add('data: ' + ab.data);
+        memo_AbastPaf1.Lines.Add('hora: ' + ab.hora);
+        memo_AbastPaf1.Lines.Add('registro: ' + IntToStr(ab.registro));
+        memo_AbastPaf1.Lines.Add('encerranteI: ' + FloatToStr(ab.encerranteI));
+        memo_AbastPaf1.Lines.Add('encerranteF: ' + FloatToStr(ab.encerranteF));
+
+        if ab.integridade then
+          memo_AbastPaf1.Lines.Add('integridade: TRUE')
+        else
+          memo_AbastPaf1.Lines.Add('integridade: FALSE');
+        if ab.checksum then
+          memo_AbastPaf1.Lines.Add('checksum: TRUE')
+        else
+          memo_AbastPaf1.Lines.Add('checksum: FALSE');
+
+        memo_AbastPaf1.Lines.Add('tag1: ' + ab.tag1);
+        memo_AbastPaf1.Lines.Add('tag2: ' + ab.tag2);
+
+        Check.Checked := ab.checksum;
+        integridade.Checked := ab.integridade;
+        value.Checked := ab.value;
+
+        EditTotaisDin.Text := floattostr(ab.total_dinheiro);
+        EditCanal.Text := ab.codbico;
+        EditPPL.Text := floattostr(ab.PU);
+        EditData.Text := ab.data;//.Substring(0, 10); Comentado por erro no tal do Record
+        // String( ab.data).Substring(1,8) ;
+        EditHora.Text := ab.hora;
+        EditTempo.Text := ab.tempo;
+        EditEnc.Text := floattostr(ab.encerranteI) + ' / ' +
+          floattostr(ab.encerranteF);
+        EditRegistro.Text := inttostr(ab.registro);
+        EditTotaisLT.Text := floattostr(ab.total_litros);
+        EditString.Text := ab.st_full;
+
     end;
-//    EditTotaisDin.Text := floattostr(ab.total_dinheiro);
-//    EditCanal.Text := ab.codbico;
-//    EditPPL.Text := floattostr(ab.PU);
-//    EditData.Text := ab.data;
-//    EditHora.Text := ab.hora;
-//    EditTempo.Text := ab.tempo;
-//    EditEnc.Text := floattostr(ab.encerranteI) + ' / ' +
-//      floattostr(ab.encerranteF);
-//    EditRegistro.Text := inttostr(ab.registro);
-//    EditTotaisLT.Text := floattostr(ab.total_litros);
-//    EditString.Text := ab.st_full;
 
   except on E : Exception do
       ShowMessage(E.ClassName+' razão do erro, messagem : '+E.Message);
@@ -1480,6 +1518,7 @@ begin
   RadioButton7.Checked := true;
   Button31.Enabled := false;
   Button30.Enabled := true;
+  Form1.Caption := 'Companytec Automação e Controle - Desenvolvimento de Software - Teste DLL Vr 1.3.0';
 end;
 
 procedure TForm1.Button35Click(Sender: TObject);
@@ -1700,7 +1739,7 @@ begin
 
   ab := LeAbastecimentoPAF2;
 
-  DecodeTime(ab.datetime, myHour, myMin, mySec, myMilli);
+//  DecodeTime(ab.datetime, myHour, myMin, mySec, myMilli);
 
   if ab.value = false then
   begin
@@ -1722,14 +1761,15 @@ begin
     Memo8.Lines.Add('total_dinheiro: ' + floattostr(ab.total_dinheiro));
     Memo8.Lines.Add('total_litros: ' + floattostr(ab.total_litros));
     Memo8.Lines.Add('PU: ' + floattostr(ab.PU));
-    Memo8.Lines.Add('tempo: ' + inttostr(ab.tempo));
+    Memo8.Lines.Add('tempo: ' + ab.tempo);
     Memo8.Lines.Add('codbico: ' + ab.codbico);
     Memo8.Lines.Add('numbico: ' + inttostr(ab.numbico));
     Memo8.Lines.Add('voltanque: ' + inttostr(ab.voltanque));
     Memo8.Lines.Add('codcombustivel: ' + inttostr(ab.codcombustivel));
     Memo8.Lines.Add('seriecbc: ' + inttostr(ab.seriecbc));
     Memo8.Lines.Add('tipocbc: ' + inttostr(ord(ab.tipocbc) - 65));
-    Memo8.Lines.Add('data: ' + DateTimeToStr(ab.datetime));
+    Memo8.Lines.Add('data: ' + ab.data);
+    Memo8.Lines.Add('hora: ' + ab.hora);
     Memo8.Lines.Add('st_full: ' + ab.st_full);
     Memo8.Lines.Add('registro: ' + inttostr(ab.registro));
     Memo8.Lines.Add('encerranteI: ' + floattostr(ab.encerranteI));
@@ -1749,22 +1789,23 @@ begin
     Check.Checked := ab.checksum;
     integridade.Checked := ab.integridade;
     value.Checked := ab.value;
+
     EditTotaisDin.Text := floattostr(ab.total_dinheiro);
     EditCanal.Text := ab.codbico;
     EditPPL.Text := floattostr(ab.PU);
 
-    EditData.Text := DateToStr(ab.datetime);//.Substring(0, 10); Comentado por erro no tal do Record
+    EditData.Text := ab.data;//.Substring(0, 10); Comentado por erro no tal do Record
     // String( ab.data).Substring(1,8) ;
-    EditHora.Text := Format('%.2d:%.2d', [myHour, myMin]);
-    EditTempo.Text := inttostr(ab.tempo);
+    EditHora.Text := ab.hora;
+    EditTempo.Text := ab.tempo;
     EditEnc.Text := floattostr(ab.encerranteI) + ' / ' +
       floattostr(ab.encerranteF);
     EditRegistro.Text := inttostr(ab.registro);
     EditTotaisLT.Text := floattostr(ab.total_litros);
     EditString.Text := ab.st_full;
 
-    if (ab.integridade and ab.checksum) then
-      Incrementa;
+//    if (ab.integridade and ab.checksum) then
+//      Incrementa;
   end;
 end;
 

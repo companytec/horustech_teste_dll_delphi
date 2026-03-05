@@ -6,318 +6,319 @@ uses Windows;
 
 Type
   teste = record
-    v1: double;
-    v2: double;
-    bool: boolean;
-    a: string[2];
-    b: string[2];
-    c: string[2];
+    v1              :double;
+    v2              :double;
+    bool            :boolean;
+    a               :string[2];
+    b               :string[2];
+    c               :string[2];
   end;
 
 type
   FoxString = record
-    st: string[4];
+    st              :string[4];
   end;
 
 Type
   AbastTWC = record
-    value: boolean;
-    total_dinheiro: currency;
-    total_litros: double;
-    PU: currency;
-    tempo: string[8];
-    codbico: string[2];
-    numbico: integer;
-    numtanque: integer;
-    voltanque: integer;
-    codcombustivel: integer;
-    seriecbc: integer;
-    tipocbc: char;
-    data: string[10];
-    hora: string[5];
-    st_full: string[123];
-    registro: integer;
-    encerranteI: double;
-    encerranteF: double;
-    integridade: boolean;
-    checksum: boolean;
-    tag1: string[16];
-    tag2: string[16];
-    numbicopista: integer;
-    odometro: integer;
+    value           :boolean;
+    total_dinheiro  :currency;
+    total_litros    :double;
+    PU              :currency;
+    tempo           :string[8];
+    codbico         :string[2];
+    numbico         :integer;
+    numtanque       :integer;
+    voltanque       :integer;
+    codcombustivel  :integer;
+    seriecbc        :integer;
+    tipocbc         :char;
+    data            :string[10];
+    hora            :string[5];
+    st_full         :string[123];
+    registro        :integer;
+    encerranteI     :double;
+    encerranteF     :double;
+    integridade     :boolean;
+    checksum        :boolean;
+    tag1            :string[16];
+    tag2            :string[16];
+    numbicopista    :integer;
+    odometro        :integer;
   end;
 
 Type
   Abast = record
-    value: boolean;
-    total_dinheiro: currency;
-    total_litros: double;
-    PU: currency;
-    tempo: string[8];
-    canal: string[2];
-    data: string[10];
-    hora: string[5];
-    st_full: string[55];
-    registro: integer;
-    encerrante: real;
-    integridade: boolean;
-    checksum: boolean;
+    value           :boolean;
+    total_dinheiro  :currency;
+    total_litros    :double;
+    PU              :currency;
+    tempo           :string[8];
+    canal           :string[2];
+    data            :string[10];
+    hora            :string[5];
+    st_full         :string[55];
+    registro        :integer;
+    encerrante      :real;
+    integridade     :boolean;
+    checksum        :boolean;
   end;
 
 Type
   AbastVB = record
-    registro: integer;
-    value: boolean;
-    integridade: boolean;
-    checksum: boolean;
-    encerrante: double;
-    total_dinheiro: double;
-    total_litros: double;
-    PU: double;
-    tempo: string;
-    canal: string;
-    data: string;
-    hora: string;
-    st_full: string;
+    registro        :integer;
+    value           :boolean;
+    integridade     :boolean;
+    checksum        :boolean;
+    encerrante      :double;
+    total_dinheiro  :double;
+    total_litros    :double;
+    PU              :double;
+    tempo           :string;
+    canal           :string;
+    data            :string;
+    hora            :string;
+    st_full         :string;
   end;
 
 Type
   AbastFid = record
-    value: boolean;
-    total_dinheiro: currency;
-    total_litros: double;
-    PU: currency;
-    tempo: string[8];
-    canal: string[2];
-    data: string[10];
-    hora: string[5];
-    st_full: string[75];
-    registro: integer;
-    encerrante: real;
-    integridade: boolean;
-    checksum: boolean;
-    tag: string[16];
+    value           :boolean;
+    total_dinheiro  :currency;
+    total_litros    :double;
+    PU              :currency;
+    tempo           :string[8];
+    canal           :string[2];
+    data            :string[10];
+    hora            :string[5];
+    st_full         :string[75];
+    registro        :integer;
+    encerrante      :real;
+    integridade     :boolean;
+    checksum        :boolean;
+    tag             :string[16];
   end;
 
 Type
   AbastFid2 = record
-    value: boolean;
-    total_dinheiro: currency;
-    total_litros: double;
-    PU: currency;
-    tempo: string[8];
-    canal: string[2];
-    data: string[10];
-    hora: string[5];
-    st_full: string[87];
-    registro: integer;
-    encerrante: real;
-    integridade: boolean;
-    checksum: boolean;
-    tag: string[16];
-    tag2: string[16];
+    value           :boolean;
+    total_dinheiro  :currency;
+    total_litros    :double;
+    PU              :currency;
+    tempo           :string[8];
+    canal           :string[2];
+    data            :string[10];
+    hora            :string[5];
+    st_full         :string[87];
+    registro        :integer;
+    encerrante      :real;
+    integridade     :boolean;
+    checksum        :boolean;
+    tag             :string[16];
+    tag2            :string[16];
   end;
 
 Type
   AbastPAF1 = record
-    value: boolean;
-    total_dinheiro: currency;
-    total_litros: double;
-    PU: currency;
-    tempo: string[8];
-    codbico: string[2];
-    numbico: integer;
-    numtanque: integer;
-    voltanque: integer;
-    codcombustivel: integer;
-    seriecbc: integer;
-    tipocbc: char;
-    data: string[10];
-    hora: string[5];
-    st_full: string[123];
-    registro: integer;
-    encerranteI: double;
-    encerranteF: double;
-    integridade: boolean;
-    checksum: boolean;
-    tag1: string[16];
-    tag2: string[16];
+    value           :boolean;
+    total_dinheiro  :currency;
+    total_litros    :double;
+    PU              :currency;
+    tempo           :string[8];
+    codbico         :string[2];
+    numbico         :integer;
+    numtanque       :integer;
+    voltanque       :integer;
+    codcombustivel  :integer;
+    seriecbc        :integer;
+    tipocbc         :AnsiChar;
+    data            :string[10];
+    hora            :string[5];
+    st_full         :string[123];
+    registro        :integer;
+    encerranteI     :double;
+    encerranteF     :double;
+    integridade     :boolean;
+    checksum        :boolean;
+    tag1            :string[16];
+    tag2            :string[16];
   end;
 
 Type
   AbastEstendido=record
-        value           :boolean;
-        total_dinheiro  :currency;
-        total_litros    :double;
-        PU              :currency;
-        tempo           :string[8];
-        codbico         :string[2];
-        numbico         :integer;
-        numtanque       :integer;
-        voltanque       :integer;
-        codcombustivel  :integer;
-        seriecbc        :integer;
-        tipocbc         :char;
-        data            :string[10];
-        hora            :string[5];
-        st_full         :string[148];
-        registro        :integer;
-        encerranteI     :double;
-        encerranteF     :double;
-        integridade     :boolean;
-        checksum        :boolean;
-        tag1            :string[16];
-        tag2            :string[16];
-        end;
+    value           :boolean;
+    total_dinheiro  :currency;
+    total_litros    :double;
+    PU              :currency;
+    tempo           :string[8];
+    codbico         :string[2];
+    numbico         :integer;
+    numtanque       :integer;
+    voltanque       :integer;
+    codcombustivel  :integer;
+    seriecbc        :integer;
+    tipocbc         :char;
+    data            :string[10];
+    hora            :string[5];
+    st_full         :string[148];
+    registro        :integer;
+    encerranteI     :double;
+    encerranteF     :double;
+    integridade     :boolean;
+    checksum        :boolean;
+    tag1            :string[16];
+    tag2            :string[16];
+  end;
 
 Type
-  AbastPAF2 = record
-    value: boolean;
-    total_dinheiro: currency;
-    total_litros: double;
-    PU: currency;
-    tempo: integer;
-    codbico: string[2];
-    numbico: integer;
-    numtanque: integer;
-    voltanque: integer;
-    codcombustivel: integer;
-    seriecbc: integer;
-    tipocbc: char;
-    datetime: TDatetime;
-    st_full: string[123];
-    registro: integer;
-    encerranteI: double;
-    encerranteF: double;
-    integridade: boolean;
-    checksum: boolean;
-    tag1: string[16];
-    tag2: string[16];
+  AbastPAF2=packed record
+    value           :boolean;
+    total_dinheiro  :currency;
+    total_litros    :double;
+    PU              :currency;
+    tempo           :string[8];
+    codbico         :string[2];
+    numbico         :integer;
+    numtanque       :integer;
+    voltanque       :integer;
+    codcombustivel  :integer;
+    seriecbc        :integer;
+    tipocbc         :AnsiChar;
+    data            :string[10];
+    hora            :string[8];
+    st_full         :string[127];
+    registro        :integer;
+    encerranteI     :double;
+    encerranteF     :double;
+    integridade     :boolean;
+    checksum        :boolean;
+    tag1            :string[16];
+    tag2            :string[16];
   end;
 
 Type
   MemoryPointers = record
-    writePointer:string[4];
-    readPointer:string[4];
+    writePointer    :string[4];
+    readPointer     :string[4];
   end;
 
 Type
   Abast2 = record
-    value: string[1];
-    total_dinheiro: string[6];
-    total_litros: string[6];
-    PU: string[4];
-    tempo: string[8];
-    canal: string[2];
-    data: string[10];
-    hora: string[5];
-    st_full: string[55];
-    registro: string[4];
-    encerrante: string[10];
-    integridade: string[1];
-    checksum: string[1];
+    value           :string[1];
+    total_dinheiro  :string[6];
+    total_litros    :string[6];
+    PU              :string[4];
+    tempo           :string[8];
+    canal           :string[2];
+    data            :string[10];
+    hora            :string[5];
+    st_full         :string[55];
+    registro        :string[4];
+    encerrante      :string[10];
+    integridade     :string[1];
+    checksum        :string[1];
   end;
 
 Type
   Abast3 = record
-    value: string[1];
-    total_dinheiro: string[6];
-    total_litros: string[6];
-    PU: string[4];
-    tempo: string[8];
-    canal: string[2];
-    data: string[10];
-    hora: string[5];
-    st_full: string[75];
-    registro: string[4];
-    encerrante: string[10];
-    id: string[16];
-    integridade: string[1];
-    checksum: string[1];
+    value           :string[1];
+    total_dinheiro  :string[6];
+    total_litros    :string[6];
+    PU              :string[4];
+    tempo           :string[8];
+    canal           :string[2];
+    data            :string[10];
+    hora            :string[5];
+    st_full         :string[75];
+    registro        :string[4];
+    encerrante      :string[10];
+    id              :string[16];
+    integridade     :string[1];
+    checksum        :string[1];
   end;
 
 Type
   IFid = record
-    value: boolean;
-    Codigo: string[16];
-    Endereco: string[2];
-    Dia: string[2];
-    hora: string[2];
-    Minuto: string[2];
-    Mes: string[2];
-    registro: integer;
-    Status: boolean;
-    StFull: string[37];
+    value           :boolean;
+    Codigo          :string[16];
+    Endereco        :string[2];
+    Dia             :string[2];
+    hora            :string[2];
+    Minuto          :string[2];
+    Mes             :string[2];
+    registro        :integer;
+    Status          :boolean;
+    StFull          :string[37];
   end;
 
 Type
   VBOnLine = record
-    bico: array [1 .. 48] of string;
-    volume: array [1 .. 48] of double;
+    bico            :array [1 .. 48] of string;
+    volume          :array [1 .. 48] of double;
   end;
 
 Type
   StFid = record
-    Status: string[32];
+    Status          :string[32];
   end;
 
 Type
   StStatus2 = record
-    Posicao: array [1 .. 48] of string[20];
+    Posicao         :array [1 .. 48] of string[20];
   end;
 
 Type
   stPPL = record
-    bico: string[2];
-    PPL: string[4];
+    bico            :string[2];
+    PPL             :string[4];
   end;
 
 Type
   PPLNivel = record
-    nivel0: real;
-    nivel1: real;
-    nivel2: real;
+    nivel0          :real;
+    nivel1          :real;
+    nivel2          :real;
   end;
 
 Type
   stEncerrante = record
-    bico: string[2];
-    encerrante: string[8];
+    bico            :string[2];
+    encerrante      :string[8];
   end;
 
 type
   visualizacao = record
-    StFull: string[250];
+    StFull          :string[250];
   end;
 
 type
   StStatus = record
-    value: string[100];
+    value           :string[100];
   end;
 
 type
   Retorno = record
-    value: string[100];
+    value           :string[100];
   end;
 
 type
   Retorno2 = record
-    value: string[60];
+    value           :string[60];
   end;
 
 Type
   Virgula = record
-    ptotal: byte;
-    ppu: byte;
-    litragem: byte;
+    ptotal          :byte;
+    ppu             :byte;
+    litragem        :byte;
   end;
 
 type
   info = record
-    titulo: string[20];
-    versao: string[5];
-    data: string[10];
-    autor: string[20];
+    titulo          :string[20];
+    versao          :string[5];
+    data            :string[10];
+    autor           :string[20];
   end;
 
   Error = (ErroString, None, ErroCodBico, ErroCaracterModo, ErroTimeout,
@@ -326,28 +327,28 @@ type
     SolicitaLib);
 
   MultiStatus = record
-    Status: array [1 .. 48] of StOptions;
+    Status          :array [1 .. 48] of StOptions;
   end;
 
   Online = record
-    litragem: array [1 .. 48] of real;
-    bico: array [1 .. 48] of string[2];
+    litragem        :array [1 .. 48] of real;
+    bico            :array [1 .. 48] of string[2];
   end;
 
   encerrante = record
-    bico: string[2];
-    Valor: real;
+    bico            :string[2];
+    Valor           :real;
   end;
 
   canal = record
-    canal: array [1 .. 48] of byte;
-    PuAux: array [1 .. 48] of double;
+    canal           :array [1 .. 48] of byte;
+    PuAux           :array [1 .. 48] of double;
   end;
 
   Enc = record
-    bico: string[2];
-    tipo: string[1];
-    Valor: string[8];
+    bico            :string[2];
+    tipo            :string[1];
+    Valor           :string[8];
   end;
 
 {$IFNDEF COMPANYTEC}

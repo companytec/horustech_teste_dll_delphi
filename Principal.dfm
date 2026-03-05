@@ -3,7 +3,6 @@ object Form1: TForm1
   Top = 315
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  Caption = 'Companytec Automa'#231#227'o e Controle - Desenvolvimento de Software'
   ClientHeight = 662
   ClientWidth = 940
   Color = clBtnFace
@@ -421,18 +420,18 @@ object Form1: TForm1
             OnClick = Button43Click
           end
           object Button47: TButton
-            Left = 0
+            Left = 11
             Top = 150
-            Width = 74
+            Width = 141
             Height = 25
             Caption = 'LeAbastecimentoPAF1Fix'
             TabOrder = 2
             Visible = False
           end
           object Button51: TButton
-            Left = 80
+            Left = 158
             Top = 150
-            Width = 51
+            Width = 139
             Height = 25
             Caption = 'LeAbastecimentoTWC'
             TabOrder = 3
@@ -456,7 +455,7 @@ object Form1: TForm1
             Top = 150
             Width = 119
             Height = 25
-            Caption = 'Enviar Comando'
+            Caption = 'LeAbastecimento'
             TabOrder = 0
             OnClick = Button4Click
           end
@@ -554,7 +553,7 @@ object Form1: TForm1
             Top = 150
             Width = 119
             Height = 25
-            Caption = 'Enviar Comando'
+            Caption = 'LeAbFix'
             TabOrder = 1
             OnClick = Button7Click
           end
@@ -637,11 +636,11 @@ object Form1: TForm1
             ParentFont = False
           end
           object LeFid: TButton
-            Left = 440
+            Left = 368
             Top = 98
-            Width = 75
+            Width = 147
             Height = 25
-            Caption = 'Enviar'
+            Caption = 'LeAbastecimentoFid'
             TabOrder = 0
             OnClick = LeFidClick
           end
@@ -829,7 +828,7 @@ object Form1: TForm1
             Top = 96
             Width = 184
             Height = 25
-            Caption = 'Enviar'
+            Caption = 'LeAbastecimentoFid2'
             TabOrder = 2
             OnClick = Button42Click
           end
@@ -895,7 +894,7 @@ object Form1: TForm1
             Top = 40
             Width = 134
             Height = 25
-            Caption = 'Enviar comando'
+            Caption = 'GetMemoryPointers'
             TabOrder = 0
             OnClick = btn_SendCommandReadPointersMemoryClick
           end
@@ -923,14 +922,15 @@ object Form1: TForm1
             Width = 546
             Height = 128
             ReadOnly = True
+            ScrollBars = ssVertical
             TabOrder = 0
           end
           object btn_ReadSalePaf1: TButton
-            Left = 570
+            Left = 502
             Top = 150
-            Width = 75
+            Width = 143
             Height = 25
-            Caption = 'Enviar'
+            Caption = 'LeAbastecimentoPAF1'
             TabOrder = 1
             OnClick = btn_ReadSalePaf1Click
           end
@@ -947,11 +947,11 @@ object Form1: TForm1
             TabOrder = 0
           end
           object btn_ReadExtendedSale: TButton
-            Left = 570
+            Left = 488
             Top = 150
-            Width = 75
+            Width = 157
             Height = 25
-            Caption = 'Enviar'
+            Caption = 'LeAbastecimentoEstendido'
             TabOrder = 1
             OnClick = btn_ReadExtendedSaleClick
           end
