@@ -396,7 +396,7 @@ object Form1: TForm1
         Left = 3
         Top = 177
         Width = 756
-        Height = 206
+        Height = 248
         ActivePage = TabSheet7
         TabOrder = 1
         object TabSheet18: TTabSheet
@@ -410,14 +410,14 @@ object Form1: TForm1
             ScrollBars = ssVertical
             TabOrder = 0
           end
-          object btnLeAbastecimentoPAF2: TButton
-            Left = 469
-            Top = 150
-            Width = 137
+          object btnLeAbastecimentoPAF2New: TButton
+            Left = 602
+            Top = 181
+            Width = 143
             Height = 25
-            Caption = 'btnLeAbastecimentoPAF2'
+            Caption = 'LeAbastecimentoPAF2New'
             TabOrder = 1
-            OnClick = btnLeAbastecimentoPAF2Click
+            OnClick = btnLeAbastecimentoPAF2NewClick
           end
           object btnLeAbastecimentoPAF1Fix: TButton
             Left = 11
@@ -446,6 +446,15 @@ object Form1: TForm1
             Caption = 'Enviar (C_GetSalePaf)'
             TabOrder = 4
             OnClick = btnC_GetSalePafClick
+          end
+          object btnLeAbastecimentoPAF2: TButton
+            Left = 461
+            Top = 181
+            Width = 135
+            Height = 25
+            Caption = 'LeAbastecimentoPAF2'
+            TabOrder = 5
+            OnClick = btnLeAbastecimentoPAF2Click
           end
         end
         object TabSheet3: TTabSheet

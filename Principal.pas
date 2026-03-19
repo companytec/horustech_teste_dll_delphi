@@ -184,7 +184,7 @@ type
     btnLeAbastecimentoFid2: TButton;
     TabSheet18: TTabSheet;
     Memo8: TMemo;
-    btnLeAbastecimentoPAF2: TButton;
+    btnLeAbastecimentoPAF2New: TButton;
     TabSheet19: TTabSheet;
     Button44: TButton;
     Button45: TButton;
@@ -362,6 +362,7 @@ type
     btndeleteTagFid: TButton;
     edt_PositionDeleteIDF: TEdit;
     Label72: TLabel;
+    btnLeAbastecimentoPAF2: TButton;
     function ErrorToString(Erro: Error): string;
     procedure btnInicializaSerialClick(Sender: TObject);
     procedure btnFechaSerialClick(Sender: TObject);
@@ -405,7 +406,7 @@ type
     procedure Button39Click(Sender: TObject);
     procedure Button41Click(Sender: TObject);
     procedure btnLeAbastecimentoFid2Click(Sender: TObject);
-    procedure btnLeAbastecimentoPAF2Click(Sender: TObject);
+    procedure btnLeAbastecimentoPAF2NewClick(Sender: TObject);
     procedure Button44Click(Sender: TObject);
     procedure Button45Click(Sender: TObject);
     procedure Button46Click(Sender: TObject);
@@ -438,6 +439,7 @@ type
     procedure btnConsultaCodigoVirgulaPPLClick(Sender: TObject);
     procedure btnLeAbastecimentoEstendidoClick(Sender: TObject);
     procedure btndeleteTagFidClick(Sender: TObject);
+    procedure btnLeAbastecimentoPAF2Click(Sender: TObject);
 
     // procedure Button47Click(Sender: TObject);
     // procedure Button48Click(Sender: TObject);
@@ -594,7 +596,7 @@ end;
 // ------------------------------------------------------------------------------
 procedure TForm1.btnLeAbastecimentoPAFRegClick(Sender: TObject);
 var
-  ab: AbastPAF1;
+  ab: AbastPAF2;
   str: string;
   flt: double;
   myHour, myMin, mySec, myMilli: Word;
@@ -602,22 +604,67 @@ begin
 
   ab := LeAbastecimentoPAFReg(SpinEdit2.value);
 
-  Check.Checked := ab.checksum;
-  integridade.Checked := ab.integridade;
-  value.Checked := ab.value;
-  EditTotaisDin.Text := floattostr(ab.total_dinheiro);
-  EditCanal.Text := ab.codbico;
-  EditPPL.Text := floattostr(ab.PU);
-//  EditData.Text := DateToStr(ab.datetime);//.Substring(0, 10); Comentado por erro no tal do Record
-//   String( ab.data).Substring(1,8) ;
-  EditHora.Text := ab.hora;
-//  EditTempo.Text := inttostr(ab.tempo);
-  EditEnc.Text := floattostr(ab.encerranteI) + ' / ' +
-    floattostr(ab.encerranteF);
-  EditRegistro.Text := inttostr(ab.registro);
-  EditTotaisLT.Text := floattostr(ab.total_litros);
-  EditString.Text := ab.st_full;
-  Memo5.Lines.Add(ab.st_full);
+     DecodeTime(ab.datetime, myHour, myMin, mySec, myMilli);
+
+  if ab.value = false then
+  begin
+    Memo5.Lines.Add('(0)');
+  end
+  else
+  begin
+
+    Memo5.Lines.Add
+      ('--------------------------------------------------------------------------');
+
+    if ab.value then
+      Memo5.Lines.Add('value: TRUE')
+    else
+      Memo5.Lines.Add('value: FALSE');
+
+    Memo5.Lines.Add('total_dinheiro: ' + floattostr(ab.total_dinheiro));
+    Memo5.Lines.Add('total_litros: ' + floattostr(ab.total_litros));
+    Memo5.Lines.Add('PU: ' + floattostr(ab.PU));
+    Memo5.Lines.Add('tempo: ' + inttostr(ab.tempo));
+    Memo5.Lines.Add('codbico: ' + ab.codbico);
+    Memo5.Lines.Add('numbico: ' + inttostr(ab.numbico));
+    Memo5.Lines.Add('voltanque: ' + inttostr(ab.voltanque));
+    Memo5.Lines.Add('codcombustivel: ' + inttostr(ab.codcombustivel));
+    Memo5.Lines.Add('seriecbc: ' + inttostr(ab.seriecbc));
+    Memo5.Lines.Add('tipocbc: ' + inttostr(ord(ab.tipocbc) - 65));
+    Memo5.Lines.Add('data: ' + DateTimeToStr(ab.datetime));
+    Memo5.Lines.Add('st_full: ' + ab.st_full);
+    Memo5.Lines.Add('registro: ' + inttostr(ab.registro));
+    Memo5.Lines.Add('encerranteI: ' + floattostr(ab.encerranteI));
+    Memo5.Lines.Add('encerranteF: ' + floattostr(ab.encerranteF));
+
+    if ab.integridade then
+      Memo5.Lines.Add('integridade: TRUE')
+    else
+      Memo5.Lines.Add('integridade: FALSE');
+    if ab.checksum then
+      Memo5.Lines.Add('checksum: TRUE')
+    else
+      Memo5.Lines.Add('checksum: FALSE');
+    Memo5.Lines.Add('tag1: ' + ab.tag1);
+    Memo5.Lines.Add('tag2: ' + ab.tag2);
+
+    Check.Checked := ab.checksum;
+    integridade.Checked := ab.integridade;
+    value.Checked := ab.value;
+    EditTotaisDin.Text := floattostr(ab.total_dinheiro);
+    EditCanal.Text := ab.codbico;
+    EditPPL.Text := floattostr(ab.PU);
+
+    EditData.Text := DateToStr(ab.datetime);//.Substring(0, 10); Comentado por erro no tal do Record
+    // String( ab.data).Substring(1,8) ;
+    EditHora.Text := Format('%.2d:%.2d', [myHour, myMin]);
+    EditTempo.Text := inttostr(ab.tempo);
+    EditEnc.Text := floattostr(ab.encerranteI) + ' / ' +
+      floattostr(ab.encerranteF);
+    EditRegistro.Text := inttostr(ab.registro);
+    EditTotaisLT.Text := floattostr(ab.total_litros);
+    EditString.Text := ab.st_full;
+  end;
 end;
 
 // ------------------------------------------------------------------------------
@@ -1738,6 +1785,85 @@ var
 begin
 
   ab := LeAbastecimentoPAF2;
+
+  DecodeTime(ab.datetime, myHour, myMin, mySec, myMilli);
+
+  if ab.value = false then
+  begin
+    Memo8.Lines.Add('(0)');
+    ClearFields;
+
+  end
+  else
+  begin
+
+    Memo8.Lines.Add
+      ('--------------------------------------------------------------------------');
+
+    if ab.value then
+      Memo8.Lines.Add('value: TRUE')
+    else
+      Memo8.Lines.Add('value: FALSE');
+
+    Memo8.Lines.Add('total_dinheiro: ' + floattostr(ab.total_dinheiro));
+    Memo8.Lines.Add('total_litros: ' + floattostr(ab.total_litros));
+    Memo8.Lines.Add('PU: ' + floattostr(ab.PU));
+    Memo8.Lines.Add('tempo: ' + inttostr(ab.tempo));
+    Memo8.Lines.Add('codbico: ' + ab.codbico);
+    Memo8.Lines.Add('numbico: ' + inttostr(ab.numbico));
+    Memo8.Lines.Add('voltanque: ' + inttostr(ab.voltanque));
+    Memo8.Lines.Add('codcombustivel: ' + inttostr(ab.codcombustivel));
+    Memo8.Lines.Add('seriecbc: ' + inttostr(ab.seriecbc));
+    Memo8.Lines.Add('tipocbc: ' + inttostr(ord(ab.tipocbc) - 65));
+    Memo8.Lines.Add('data: ' + DateTimeToStr(ab.datetime));
+    Memo8.Lines.Add('st_full: ' + ab.st_full);
+    Memo8.Lines.Add('registro: ' + inttostr(ab.registro));
+    Memo8.Lines.Add('encerranteI: ' + floattostr(ab.encerranteI));
+    Memo8.Lines.Add('encerranteF: ' + floattostr(ab.encerranteF));
+
+    if ab.integridade then
+      Memo8.Lines.Add('integridade: TRUE')
+    else
+      Memo8.Lines.Add('integridade: FALSE');
+    if ab.checksum then
+      Memo8.Lines.Add('checksum: TRUE')
+    else
+      Memo8.Lines.Add('checksum: FALSE');
+    Memo8.Lines.Add('tag1: ' + ab.tag1);
+    Memo8.Lines.Add('tag2: ' + ab.tag2);
+
+    Check.Checked := ab.checksum;
+    integridade.Checked := ab.integridade;
+    value.Checked := ab.value;
+    EditTotaisDin.Text := floattostr(ab.total_dinheiro);
+    EditCanal.Text := ab.codbico;
+    EditPPL.Text := floattostr(ab.PU);
+
+    EditData.Text := DateToStr(ab.datetime);//.Substring(0, 10); Comentado por erro no tal do Record
+    // String( ab.data).Substring(1,8) ;
+    EditHora.Text := Format('%.2d:%.2d', [myHour, myMin]);
+    EditTempo.Text := inttostr(ab.tempo);
+    EditEnc.Text := floattostr(ab.encerranteI) + ' / ' +
+      floattostr(ab.encerranteF);
+    EditRegistro.Text := inttostr(ab.registro);
+    EditTotaisLT.Text := floattostr(ab.total_litros);
+    EditString.Text := ab.st_full;
+
+//    if (ab.integridade and ab.checksum) then
+//      Incrementa;
+  end;
+
+end;
+
+procedure TForm1.btnLeAbastecimentoPAF2NewClick(Sender: TObject);
+var
+  ab: AbastPAF2New;
+  str: string;
+  flt: double;
+  myHour, myMin, mySec, myMilli: Word;
+begin
+
+  ab := LeAbastecimentoPAF2New;
 
 //  DecodeTime(ab.datetime, myHour, myMin, mySec, myMilli);
 

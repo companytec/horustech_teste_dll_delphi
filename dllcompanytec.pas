@@ -171,7 +171,7 @@ Type
   end;
 
 Type
-  AbastPAF2=packed record
+  AbastPAF2New=packed record
     value           :boolean;
     total_dinheiro  :currency;
     total_litros    :double;
@@ -195,6 +195,31 @@ Type
     tag1            :string[16];
     tag2            :string[16];
   end;
+
+Type
+    AbastPAF2=record
+        value           :boolean;
+        total_dinheiro  :currency;
+        total_litros    :double;
+        PU              :currency;
+        tempo           :integer;
+        codbico         :string[2];
+        numbico         :integer;
+        numtanque       :integer;
+        voltanque       :integer;
+        codcombustivel  :integer;
+        seriecbc        :integer;
+        tipocbc         :char;
+        datetime        :TDatetime;
+        st_full         :string[123];
+        registro        :integer;
+        encerranteI     :double;
+        encerranteF     :double;
+        integridade     :boolean;
+        checksum        :boolean;
+        tag1            :string[16];
+        tag2            :string[16];
+        end;
 
 Type
   MemoryPointers = record
@@ -419,6 +444,7 @@ Procedure Incrementa; stdcall;
 Function InicializaLogSerial(np: byte; LogFile: string): boolean; stdcall;
 Function LeAbastecimento(): Abast; stdcall;
 Function LeAbastecimentoPAF1(): AbastPAF1; stdcall;
+Function LeAbastecimentoPAF2New: AbastPAF2New; stdcall;
 Function LeAbastecimentoPAF2: AbastPAF2; stdcall;
 Function LeAbastecimentoTWC: AbastTWC; stdcall;
 Function LeAbastecimentoEstendido():AbastEstendido; stdcall;
@@ -438,7 +464,7 @@ Function LeSTEncerrante(modo: string; bico: string): shortstring; stdcall;
 Function LeStReduzida: shortstring; stdcall;
 Function LeStRegistro(NumReg: integer): shortstring; stdcall;
 Function LeStRegistroFid(NumReg: integer): shortstring; stdcall;
-Function LeAbastecimentoPAFReg(NumReg: integer): AbastPAF1; stdcall;
+Function LeAbastecimentoPAFReg(NumReg: integer): AbastPAF2; stdcall;
 Function LeStringAb(var resposta: shortstring): shortstring; stdcall;
 Function LeStringAbVB: shortstring; stdcall;
 Function LeStructEncerrante(modo: string; bico: string): stEncerrante; stdcall;
@@ -597,8 +623,8 @@ Function InicializaLogSerial;
 Function LeAbastecimento; external 'COMPANYTEC.DLL' name 'LeAbastecimento';
 Function LeAbastecimentoPAF1;
   external 'COMPANYTEC.DLL' name 'LeAbastecimentoPAF1';
-Function LeAbastecimentoPAF2;
-  external 'COMPANYTEC.DLL' name 'LeAbastecimentoPAF2';
+Function LeAbastecimentoPAF2New; external 'COMPANYTEC.DLL' name 'LeAbastecimentoPAF2New';
+Function LeAbastecimentoPAF2; external 'COMPANYTEC.DLL' name 'LeAbastecimentoPAF2';
 Function LeAbastecimentoEstendido; external 'COMPANYTEC.DLL' name 'LeAbastecimentoEstendido';
 Function LeAbFix; external 'COMPANYTEC.DLL' name 'LeAbFix';
 Function LePart; external 'COMPANYTEC.DLL' name 'LePart';
