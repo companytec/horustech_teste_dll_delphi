@@ -438,7 +438,7 @@ Function LeSTEncerrante(modo: string; bico: string): shortstring; stdcall;
 Function LeStReduzida: shortstring; stdcall;
 Function LeStRegistro(NumReg: integer): shortstring; stdcall;
 Function LeStRegistroFid(NumReg: integer): shortstring; stdcall;
-Function LeAbastecimentoPAFReg(NumReg: integer): AbastPAF2; stdcall;
+Function LeAbastecimentoPAFReg(NumReg: integer): AbastPAF1; stdcall;
 Function LeStringAb(var resposta: shortstring): shortstring; stdcall;
 Function LeStringAbVB: shortstring; stdcall;
 Function LeStructEncerrante(modo: string; bico: string): stEncerrante; stdcall;

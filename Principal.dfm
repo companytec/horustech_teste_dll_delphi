@@ -397,7 +397,7 @@ object Form1: TForm1
         Top = 177
         Width = 756
         Height = 206
-        ActivePage = TabSheet18
+        ActivePage = TabSheet7
         TabOrder = 1
         object TabSheet18: TTabSheet
           Caption = 'Leitura Abast. PAF'
@@ -410,16 +410,16 @@ object Form1: TForm1
             ScrollBars = ssVertical
             TabOrder = 0
           end
-          object Button43: TButton
+          object btnLeAbastecimentoPAF2: TButton
             Left = 469
             Top = 150
             Width = 137
             Height = 25
-            Caption = 'LeAbastecimentoPAF2'
+            Caption = 'btnLeAbastecimentoPAF2'
             TabOrder = 1
-            OnClick = Button43Click
+            OnClick = btnLeAbastecimentoPAF2Click
           end
-          object Button47: TButton
+          object btnLeAbastecimentoPAF1Fix: TButton
             Left = 11
             Top = 150
             Width = 141
@@ -428,7 +428,7 @@ object Form1: TForm1
             TabOrder = 2
             Visible = False
           end
-          object Button51: TButton
+          object btnLeAbastecimentoTWC: TButton
             Left = 158
             Top = 150
             Width = 139
@@ -436,28 +436,28 @@ object Form1: TForm1
             Caption = 'LeAbastecimentoTWC'
             TabOrder = 3
             Visible = False
-            OnClick = Button51Click
+            OnClick = btnLeAbastecimentoTWCClick
           end
-          object Button53: TButton
+          object btnC_GetSalePaf: TButton
             Left = 612
             Top = 150
             Width = 133
             Height = 25
             Caption = 'Enviar (C_GetSalePaf)'
             TabOrder = 4
-            OnClick = Button53Click
+            OnClick = btnC_GetSalePafClick
           end
         end
         object TabSheet3: TTabSheet
           Caption = 'Leitura Abast.'
-          object Button4: TButton
+          object btnLeAbastecimento: TButton
             Left = 522
             Top = 150
             Width = 119
             Height = 25
             Caption = 'LeAbastecimento'
             TabOrder = 0
-            OnClick = Button4Click
+            OnClick = btnLeAbastecimentoClick
           end
           object Memo1: TMemo
             Left = 95
@@ -479,26 +479,26 @@ object Form1: TForm1
             ScrollBars = ssVertical
             TabOrder = 0
           end
-          object Button52: TButton
-            Left = 522
+          object btnLeAbastecimentoPAFReg: TButton
+            Left = 498
             Top = 150
-            Width = 119
+            Width = 143
             Height = 25
-            Caption = 'LeRegistroPAF'
+            Caption = 'LeAbastecimentoPAFReg'
             TabOrder = 1
-            OnClick = Button52Click
+            OnClick = btnLeAbastecimentoPAFRegClick
           end
-          object Button9: TButton
-            Left = 522
+          object btnLeRegistro: TButton
+            Left = 498
             Top = 123
-            Width = 119
+            Width = 143
             Height = 25
             Caption = 'LeRegistro'
             TabOrder = 2
-            OnClick = Button9Click
+            OnClick = btnLeRegistroClick
           end
           object SpinEdit2: TSpinEdit
-            Left = 455
+            Left = 431
             Top = 136
             Width = 61
             Height = 26
@@ -548,14 +548,14 @@ object Form1: TForm1
             ScrollBars = ssVertical
             TabOrder = 0
           end
-          object Button7: TButton
+          object btnLeAbFix: TButton
             Left = 522
             Top = 150
             Width = 119
             Height = 25
             Caption = 'LeAbFix'
             TabOrder = 1
-            OnClick = Button7Click
+            OnClick = btnLeAbFixClick
           end
         end
         object TabSheet6: TTabSheet
@@ -635,14 +635,14 @@ object Form1: TForm1
             Font.Style = []
             ParentFont = False
           end
-          object LeFid: TButton
+          object btnLeAbastecimentoFid: TButton
             Left = 368
             Top = 98
             Width = 147
             Height = 25
             Caption = 'LeAbastecimentoFid'
             TabOrder = 0
-            OnClick = LeFidClick
+            OnClick = btnLeAbastecimentoFidClick
           end
           object EditTag: TEdit
             Left = 232
@@ -823,14 +823,14 @@ object Form1: TForm1
             Height = 21
             TabOrder = 1
           end
-          object Button42: TButton
+          object btnLeAbastecimentoFid2: TButton
             Left = 281
             Top = 96
             Width = 184
             Height = 25
             Caption = 'LeAbastecimentoFid2'
             TabOrder = 2
-            OnClick = Button42Click
+            OnClick = btnLeAbastecimentoFid2Click
           end
         end
         object TabSheet19: TTabSheet
@@ -889,14 +889,14 @@ object Form1: TForm1
             Height = 13
             Caption = 'Ponteiro de leitura:'
           end
-          object btn_SendCommandReadPointersMemory: TButton
+          object btnGetMemoryPointers: TButton
             Left = 299
             Top = 40
             Width = 134
             Height = 25
             Caption = 'GetMemoryPointers'
             TabOrder = 0
-            OnClick = btn_SendCommandReadPointersMemoryClick
+            OnClick = btnGetMemoryPointersClick
           end
           object edt_AnswerWritePointerMemory: TEdit
             Left = 384
@@ -925,14 +925,14 @@ object Form1: TForm1
             ScrollBars = ssVertical
             TabOrder = 0
           end
-          object btn_ReadSalePaf1: TButton
+          object btnLeAbastecimentoPAF1: TButton
             Left = 502
             Top = 150
             Width = 143
             Height = 25
             Caption = 'LeAbastecimentoPAF1'
             TabOrder = 1
-            OnClick = btn_ReadSalePaf1Click
+            OnClick = btnLeAbastecimentoPAF1Click
           end
         end
         object TabSheet22: TTabSheet
@@ -946,14 +946,14 @@ object Form1: TForm1
             ScrollBars = ssVertical
             TabOrder = 0
           end
-          object btn_ReadExtendedSale: TButton
+          object btnLeAbastecimentoEstendido: TButton
             Left = 488
             Top = 150
             Width = 157
             Height = 25
             Caption = 'LeAbastecimentoEstendido'
             TabOrder = 1
-            OnClick = btn_ReadExtendedSaleClick
+            OnClick = btnLeAbastecimentoEstendidoClick
           end
         end
       end
@@ -970,23 +970,23 @@ object Form1: TForm1
         ItemHeight = 13
         TabOrder = 0
       end
-      object Button6: TButton
+      object btnLeVisualizacao: TButton
         Left = 469
         Top = 208
         Width = 180
         Height = 25
         Caption = 'Visualiza'#231#227'o'
         TabOrder = 1
-        OnClick = Button6Click
+        OnClick = btnLeVisualizacaoClick
       end
-      object Button10: TButton
+      object btnSTVisualizacao: TButton
         Left = 469
         Top = 277
         Width = 180
         Height = 25
         Caption = 'Visualiza'#231#227'o (string)'
         TabOrder = 2
-        OnClick = Button10Click
+        OnClick = btnSTVisualizacaoClick
       end
       object Memo6: TMemo
         Left = 92
@@ -1002,14 +1002,14 @@ object Form1: TForm1
         Height = 89
         TabOrder = 4
       end
-      object btnVisualizacaoIdentificada: TButton
+      object btnGetVisualizacaoId: TButton
         Left = 512
         Top = 403
         Width = 137
         Height = 25
         Caption = 'Visualiza'#231#227'o Identificada'
         TabOrder = 5
-        OnClick = btnVisualizacaoIdentificadaClick
+        OnClick = btnGetVisualizacaoIdClick
       end
     end
     object TabSheet8: TTabSheet
@@ -1031,14 +1031,14 @@ object Form1: TForm1
         ItemHeight = 13
         TabOrder = 0
       end
-      object Button11: TButton
+      object btnLeStatus: TButton
         Left = 485
         Top = 233
         Width = 180
         Height = 25
         Caption = 'Leitura Status'
         TabOrder = 1
-        OnClick = Button11Click
+        OnClick = btnLeStatusClick
       end
       object Edit1: TEdit
         Left = 105
@@ -1047,16 +1047,16 @@ object Form1: TForm1
         Height = 21
         TabOrder = 2
       end
-      object Button12: TButton
+      object btnLeStStatus: TButton
         Left = 486
         Top = 291
         Width = 180
         Height = 25
         Caption = 'Leitura Status (string)'
         TabOrder = 3
-        OnClick = Button12Click
+        OnClick = btnLeStStatusClick
       end
-      object Button27: TButton
+      object btnLeStatusFid: TButton
         Left = 297
         Top = 233
         Width = 180
@@ -1064,9 +1064,9 @@ object Form1: TForm1
         Caption = 'LeStatusFid'
         TabOrder = 4
         Visible = False
-        OnClick = Button27Click
+        OnClick = btnLeStatusFidClick
       end
-      object Button34: TButton
+      object btnLeStStatus2: TButton
         Left = 298
         Top = 291
         Width = 180
@@ -1074,7 +1074,7 @@ object Form1: TForm1
         Caption = 'LeStStatus2'
         TabOrder = 5
         Visible = False
-        OnClick = Button34Click
+        OnClick = btnLeStStatus2Click
       end
     end
     object TabSheet9: TTabSheet
@@ -1236,68 +1236,68 @@ object Form1: TForm1
         Font.Style = []
         ParentFont = False
       end
-      object Button14: TButton
+      object btnFidIdent: TButton
         Left = 552
         Top = 26
         Width = 116
         Height = 25
         Caption = 'FidIdent'
         TabOrder = 0
-        OnClick = Button14Click
+        OnClick = btnFidIdentClick
       end
-      object Button15: TButton
+      object btnFidStatus: TButton
         Left = 552
         Top = 54
         Width = 116
         Height = 25
         Caption = 'FidStatus'
         TabOrder = 1
-        OnClick = Button15Click
+        OnClick = btnFidStatusClick
       end
-      object Button16: TButton
+      object btnFidModo: TButton
         Left = 552
-        Top = 82
+        Top = 79
         Width = 116
         Height = 25
         Caption = 'FidModo'
         TabOrder = 2
-        OnClick = Button16Click
+        OnClick = btnFidModoClick
       end
-      object Button17: TButton
+      object btnFidAciona: TButton
         Left = 552
         Top = 110
         Width = 116
         Height = 25
         Caption = 'FidAciona'
         TabOrder = 3
-        OnClick = Button17Click
+        OnClick = btnFidAcionaClick
       end
-      object Button18: TButton
+      object btnFidSetClock: TButton
         Left = 552
         Top = 138
         Width = 116
         Height = 25
         Caption = 'FidSetClock'
         TabOrder = 4
-        OnClick = Button18Click
+        OnClick = btnFidSetClockClick
       end
-      object Button19: TButton
+      object btnHRSReadTAG: TButton
         Left = 552
         Top = 166
         Width = 116
         Height = 25
-        Caption = 'FidLeRegistro'
+        Caption = 'HRSReadTAG'
         TabOrder = 5
-        OnClick = Button19Click
+        OnClick = btnHRSReadTAGClick
       end
-      object Button20: TButton
+      object btFidIncrementa: TButton
         Left = 552
         Top = 194
         Width = 116
         Height = 25
         Caption = 'FidIncrementa'
         TabOrder = 6
-        OnClick = Button20Click
+        OnClick = btFidIncrementaClick
       end
       object Edit2: TEdit
         Left = 210
@@ -1426,14 +1426,14 @@ object Form1: TForm1
         Height = 205
         TabOrder = 22
       end
-      object Button48: TButton
+      object btnHRSReadTAG_2: TButton
         Left = 552
         Top = 225
         Width = 117
         Height = 25
         Caption = 'HRSReadTag'
         TabOrder = 23
-        OnClick = Button48Click
+        OnClick = btnHRSReadTAG_2Click
       end
     end
     object TabSheet10: TTabSheet
@@ -1487,14 +1487,14 @@ object Form1: TForm1
             '$ - Dinheiro'
             'l - Litros Ext.')
         end
-        object Button13: TButton
+        object btnLeEncerrante2: TButton
           Left = 419
           Top = 34
           Width = 97
           Height = 21
-          Caption = 'Envia'
+          Caption = 'LeEncerrante2'
           TabOrder = 2
-          OnClick = Button13Click
+          OnClick = btnLeEncerrante2Click
         end
         object Edit14: TEdit
           Left = 184
@@ -1608,14 +1608,14 @@ object Form1: TForm1
           MaxLength = 2
           TabOrder = 0
         end
-        object Button29: TButton
+        object btnLeEvento: TButton
           Left = 416
           Top = 28
           Width = 97
           Height = 24
-          Caption = 'Envia'
+          Caption = 'LeEvento'
           TabOrder = 1
-          OnClick = Button29Click
+          OnClick = btnLeEventoClick
         end
         object Edit22: TEdit
           Left = 52
@@ -1670,14 +1670,14 @@ object Form1: TForm1
           TabOrder = 2
           Text = '2000'
         end
-        object Button40: TButton
+        object btnSendReceiveText: TButton
           Left = 415
           Top = 26
           Width = 97
           Height = 25
-          Caption = 'Envia'
+          Caption = 'SendReceiveText'
           TabOrder = 3
-          OnClick = Button40Click
+          OnClick = btnSendReceiveTextClick
         end
       end
     end
@@ -1713,32 +1713,32 @@ object Form1: TForm1
           MaxLength = 16
           TabOrder = 0
         end
-        object Btn_RemoveBlackList: TButton
+        object btnPopBlackList: TButton
           Left = 151
           Top = 53
           Width = 121
           Height = 25
-          Caption = 'Remover da Lista'
+          Caption = 'PopBlackList'
           TabOrder = 1
-          OnClick = Btn_RemoveBlackListClick
+          OnClick = btnPopBlackListClick
         end
-        object Btn_BlackListClear: TButton
+        object btnClearBlackList: TButton
           Left = 151
           Top = 84
           Width = 121
           Height = 25
-          Caption = 'Limpar Lista Negra'
+          Caption = 'ClearBlackList'
           TabOrder = 2
-          OnClick = Btn_BlackListClearClick
+          OnClick = btnClearBlackListClick
         end
-        object Btn_AddBlackList: TButton
+        object btnPushBlackList: TButton
           Left = 151
           Top = 27
           Width = 121
           Height = 25
-          Caption = 'Adicionar a Lista'
+          Caption = 'PushBlackList'
           TabOrder = 3
-          OnClick = Btn_AddBlackListClick
+          OnClick = btnPushBlackListClick
         end
         object Edt_BlackListResult: TEdit
           Left = 24
@@ -1786,14 +1786,14 @@ object Form1: TForm1
           MaxLength = 16
           TabOrder = 1
         end
-        object Btn_SaveTag: TButton
+        object btnsavetagFid: TButton
           Left = 80
           Top = 178
           Width = 121
           Height = 25
-          Caption = 'Salvar Cart'#227'o'
+          Caption = 'savetagFid'
           TabOrder = 2
-          OnClick = Btn_SaveTagClick
+          OnClick = btnsavetagFidClick
         end
         object RadioGroup1: TRadioGroup
           Left = 16
@@ -1824,23 +1824,23 @@ object Form1: TForm1
           Height = 88
           TabOrder = 0
         end
-        object Button38: TButton
+        object btnGetIdentTag: TButton
           Left = 130
           Top = 111
           Width = 146
           Height = 27
           Caption = 'GetIdentTag'
           TabOrder = 1
-          OnClick = Button38Click
+          OnClick = btnGetIdentTagClick
         end
-        object btnFidIncrementa: TButton
+        object btnC_IncrementIdf: TButton
           Left = 130
           Top = 142
           Width = 146
           Height = 25
-          Caption = 'FidIncrementa'
+          Caption = 'C_IncrementIdf'
           TabOrder = 2
-          OnClick = btnFidIncrementaClick
+          OnClick = btnC_IncrementIdfClick
         end
       end
       object grpLeituraCartao: TGroupBox
@@ -1864,14 +1864,14 @@ object Form1: TForm1
           Height = 13
           Caption = 'Resposta:'
         end
-        object btnLeituraCartao: TButton
+        object btnFidLeRegistro: TButton
           Left = 422
           Top = 99
           Width = 91
           Height = 25
-          Caption = 'Ler Cart'#227'o'
+          Caption = 'FidLeRegistro'
           TabOrder = 2
-          OnClick = btnLeituraCartaoClick
+          OnClick = btnFidLeRegistroClick
         end
         object edtLeituraCartao: TEdit
           Left = 98
@@ -1935,14 +1935,14 @@ object Form1: TForm1
           MaxLength = 16
           TabOrder = 3
         end
-        object btn_DeleteIDF: TButton
+        object btndeleteTagFid: TButton
           Left = 80
           Top = 147
           Width = 123
           Height = 25
-          Caption = 'Excluir cart'#227'o'
+          Caption = 'deleteTagFid'
           TabOrder = 2
-          OnClick = btn_DeleteIDFClick
+          OnClick = btndeleteTagFidClick
         end
         object edt_PositionDeleteIDF: TEdit
           Left = 16
@@ -1961,9 +1961,9 @@ object Form1: TForm1
       object GroupBox3: TGroupBox
         Left = 92
         Top = 0
-        Width = 560
+        Width = 613
         Height = 61
-        Caption = 'AlteraPreco'
+        Caption = 'SetPrice'
         TabOrder = 0
         object Label27: TLabel
           Left = 17
@@ -2009,14 +2009,14 @@ object Form1: TForm1
           MaxLength = 2
           TabOrder = 4
         end
-        object Button21: TButton
+        object btnSetPrice: TButton
           Left = 460
           Top = 28
-          Width = 95
+          Width = 141
           Height = 25
-          Caption = 'Envia'
+          Caption = 'SetPrice'
           TabOrder = 3
-          OnClick = Button21Click
+          OnClick = btnSetPriceClick
         end
         object Edit17: TEdit
           Left = 110
@@ -2040,7 +2040,7 @@ object Form1: TForm1
       object GroupBox13: TGroupBox
         Left = 92
         Top = 127
-        Width = 560
+        Width = 613
         Height = 61
         Caption = 'AlteraPrecoNivel'
         TabOrder = 1
@@ -2095,14 +2095,14 @@ object Form1: TForm1
           MaxLength = 2
           TabOrder = 5
         end
-        object Button54: TButton
+        object btnAlteraPrecoNivel: TButton
           Left = 460
           Top = 28
-          Width = 95
+          Width = 141
           Height = 25
-          Caption = 'Envia'
+          Caption = 'AlteraPrecoNivel'
           TabOrder = 4
-          OnClick = Button54Click
+          OnClick = btnAlteraPrecoNivelClick
         end
         object Edit40: TEdit
           Left = 110
@@ -2136,7 +2136,7 @@ object Form1: TForm1
       object GroupBox14: TGroupBox
         Left = 92
         Top = 261
-        Width = 560
+        Width = 613
         Height = 148
         Caption = 'Leitura de Pre'#231'o Nivel'
         TabOrder = 2
@@ -2183,14 +2183,14 @@ object Form1: TForm1
           MaxLength = 2
           TabOrder = 0
         end
-        object Button55: TButton
+        object btnLePPLNivel: TButton
           Left = 460
           Top = 32
-          Width = 95
+          Width = 141
           Height = 25
-          Caption = 'Envia'
+          Caption = 'LePPLNivel'
           TabOrder = 1
-          OnClick = Button55Click
+          OnClick = btnLePPLNivelClick
         end
         object SpinEdit6: TSpinEdit
           Left = 60
@@ -2230,7 +2230,7 @@ object Form1: TForm1
       object GroupBox7: TGroupBox
         Left = 93
         Top = 64
-        Width = 559
+        Width = 612
         Height = 59
         Caption = 'LePPL'
         TabOrder = 3
@@ -2264,20 +2264,20 @@ object Form1: TForm1
           MaxLength = 2
           TabOrder = 2
         end
-        object Button33: TButton
+        object btnLePPL: TButton
           Left = 459
           Top = 28
-          Width = 95
+          Width = 141
           Height = 25
-          Caption = 'Envia'
+          Caption = 'LePPL'
           TabOrder = 1
-          OnClick = Button33Click
+          OnClick = btnLePPLClick
         end
       end
       object GroupBox12: TGroupBox
         Left = 92
         Top = 194
-        Width = 560
+        Width = 613
         Height = 61
         Caption = 'AlteraPrecoEstendidoNivel'
         TabOrder = 4
@@ -2360,20 +2360,20 @@ object Form1: TForm1
           TabOrder = 3
           Value = 3
         end
-        object Button26: TButton
+        object btnAlteraPrecoEstendidoNivel: TButton
           Left = 460
           Top = 28
-          Width = 95
+          Width = 141
           Height = 25
-          Caption = 'Envia'
+          Caption = 'AlteraPrecoEstendidoNivel'
           TabOrder = 4
-          OnClick = Button26Click
+          OnClick = btnAlteraPrecoEstendidoNivelClick
         end
       end
       object gb_ConsultaCodigoVirgula: TGroupBox
         Left = 93
         Top = 413
-        Width = 559
+        Width = 612
         Height = 68
         Caption = 'ConsultaCodigoVirgula'
         TabOrder = 5
@@ -2407,14 +2407,14 @@ object Form1: TForm1
           MaxLength = 2
           TabOrder = 1
         end
-        object btn_EnviaConsultaCodigoVirgula: TButton
+        object btnConsultaCodigoVirgulaPPL: TButton
           Left = 459
           Top = 28
-          Width = 95
+          Width = 141
           Height = 25
-          Caption = 'Envia'
+          Caption = 'ConsultaCodigoVirgulaPPL'
           TabOrder = 2
-          OnClick = btn_EnviaConsultaCodigoVirgulaClick
+          OnClick = btnConsultaCodigoVirgulaPPLClick
         end
       end
     end
@@ -2457,14 +2457,14 @@ object Form1: TForm1
           MaxLength = 6
           TabOrder = 1
         end
-        object btn_preset: TButton
+        object btnPreset: TButton
           Left = 336
           Top = 41
           Width = 97
           Height = 25
-          Caption = 'Enviar preset'
+          Caption = 'Preset'
           TabOrder = 2
-          OnClick = btn_presetClick
+          OnClick = btnPresetClick
         end
         object edt_retorno: TEdit
           Left = 24
@@ -2539,14 +2539,14 @@ object Form1: TForm1
           Height = 21
           TabOrder = 8
         end
-        object btn_enviaPresetId: TButton
+        object btnpresetIdf: TButton
           Left = 357
           Top = 199
           Width = 145
           Height = 25
-          Caption = 'Enviar preset identificado'
+          Caption = 'presetIdf'
           TabOrder = 7
-          OnClick = btn_enviaPresetIdClick
+          OnClick = btnpresetIdfClick
         end
         object edt_bicoId: TEdit
           Left = 24
@@ -2624,23 +2624,23 @@ object Form1: TForm1
           Height = 13
           Caption = 'Resposta:'
         end
-        object btnLeituraRelogio: TButton
+        object btnC_GetClock: TButton
           Left = 366
           Top = 16
           Width = 150
           Height = 25
-          Caption = 'Leitura Rel'#243'gio'
+          Caption = 'C_GetClock'
           TabOrder = 0
-          OnClick = btnLeituraRelogioClick
+          OnClick = btnC_GetClockClick
         end
-        object btnAtualizaRelogio: TButton
+        object btnC_SetClock: TButton
           Left = 366
           Top = 43
           Width = 150
           Height = 25
-          Caption = 'Atualizar Rel'#243'gio'
+          Caption = 'C_SetClock'
           TabOrder = 1
-          OnClick = btnAtualizaRelogioClick
+          OnClick = btnC_SetClockClick
         end
         object edtResposta: TEdit
           Left = 13
@@ -2714,14 +2714,14 @@ object Form1: TForm1
           Height = 13
           Caption = 'Resposta'
         end
-        object btnAtualizarRelogioExtendido: TButton
+        object btnSetExtendedWatch: TButton
           Left = 376
           Top = 76
           Width = 131
           Height = 25
-          Caption = 'Atualizar'
+          Caption = 'SetExtendedWatch'
           TabOrder = 7
-          OnClick = btnAtualizarRelogioExtendidoClick
+          OnClick = btnSetExtendedWatchClick
         end
         object edtAno: TEdit
           Left = 147
@@ -2829,23 +2829,23 @@ object Form1: TForm1
         TabOrder = 0
         Value = 1
       end
-      object Button1: TButton
+      object btnInicializaSerial: TButton
         Left = 3
         Top = 37
         Width = 139
         Height = 25
         Caption = 'Abre serial'
         TabOrder = 1
-        OnClick = Button1Click
+        OnClick = btnInicializaSerialClick
       end
-      object Button2: TButton
+      object btnFechaSerial: TButton
         Left = 3
         Top = 65
         Width = 139
         Height = 25
         Caption = 'Fecha serial'
         TabOrder = 2
-        OnClick = Button2Click
+        OnClick = btnFechaSerialClick
       end
       object Panel1: TPanel
         Left = 3
@@ -2871,14 +2871,14 @@ object Form1: TForm1
           Caption = 'Porta Fechada'
           TabOrder = 1
         end
-        object Button3: TButton
+        object btnPortOpen: TButton
           Left = 7
           Top = 68
           Width = 125
           Height = 25
           Caption = 'Consultar Serial'
           TabOrder = 2
-          OnClick = Button3Click
+          OnClick = btnPortOpenClick
         end
       end
       object Panel9: TPanel
@@ -2897,14 +2897,14 @@ object Form1: TForm1
           Caption = 'Comunicando'
           TabOrder = 0
         end
-        object Button23: TButton
+        object btnComunica: TButton
           Left = 7
           Top = 32
           Width = 125
           Height = 25
           Caption = 'Atualiza'
           TabOrder = 1
-          OnClick = Button23Click
+          OnClick = btnComunicaClick
         end
       end
     end
@@ -2933,23 +2933,23 @@ object Form1: TForm1
         TabOrder = 0
         Text = '192.168.0.71'
       end
-      object Button30: TButton
+      object btnInicializaSocket2: TButton
         Left = 2
         Top = 120
         Width = 141
         Height = 25
         Caption = 'Conectar'
         TabOrder = 2
-        OnClick = Button30Click
+        OnClick = btnInicializaSocket2Click
       end
-      object Button31: TButton
+      object btnFechaSocket: TButton
         Left = 3
         Top = 151
         Width = 141
         Height = 25
         Caption = 'Desconectar'
         TabOrder = 3
-        OnClick = Button31Click
+        OnClick = btnFechaSocketClick
       end
       object Panel8: TPanel
         Left = 3
@@ -2975,14 +2975,14 @@ object Form1: TForm1
           Caption = 'Desconectado'
           TabOrder = 1
         end
-        object Button32: TButton
+        object btnSocketOpen: TButton
           Left = 7
           Top = 68
           Width = 125
           Height = 25
           Caption = 'Consultar Socket'
           TabOrder = 2
-          OnClick = Button32Click
+          OnClick = btnSocketOpenClick
         end
       end
       object Edit28: TEdit

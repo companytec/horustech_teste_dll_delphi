@@ -15,12 +15,12 @@ type
     TabSheet2: TTabSheet;
     Label1: TLabel;
     SpinEdit1: TSpinEdit;
-    Button1: TButton;
-    Button2: TButton;
+    btnInicializaSerial: TButton;
+    btnFechaSerial: TButton;
     Panel1: TPanel;
     RadioButton1: TRadioButton;
     RadioButton2: TRadioButton;
-    Button3: TButton;
+    btnPortOpen: TButton;
     GroupBox5: TGroupBox;
     Label3: TLabel;
     Label4: TLabel;
@@ -48,7 +48,7 @@ type
     integridade: TCheckBox;
     PageControl2: TPageControl;
     TabSheet3: TTabSheet;
-    Button4: TButton;
+    btnLeAbastecimento: TButton;
     Memo1: TMemo;
     TabSheet4: TTabSheet;
     Button5: TButton;
@@ -57,30 +57,30 @@ type
     TabSheet6: TTabSheet;
     TabSheet7: TTabSheet;
     Memo3: TMemo;
-    Button7: TButton;
+    btnLeAbFix: TButton;
     Memo4: TMemo;
     Button8: TButton;
     Memo5: TMemo;
-    Button9: TButton;
+    btnLeRegistro: TButton;
     SpinEdit2: TSpinEdit;
     ListBox1: TListBox;
-    Button6: TButton;
-    Button10: TButton;
+    btnLeVisualizacao: TButton;
+    btnSTVisualizacao: TButton;
     Memo6: TMemo;
     TabSheet8: TTabSheet;
     ListBox2: TListBox;
-    Button11: TButton;
+    btnLeStatus: TButton;
     Edit1: TEdit;
-    Button12: TButton;
+    btnLeStStatus: TButton;
     StatusBar1: TStatusBar;
     TabSheet9: TTabSheet;
-    Button14: TButton;
-    Button15: TButton;
-    Button16: TButton;
-    Button17: TButton;
-    Button18: TButton;
-    Button19: TButton;
-    Button20: TButton;
+    btnFidIdent: TButton;
+    btnFidStatus: TButton;
+    btnFidModo: TButton;
+    btnFidAciona: TButton;
+    btnFidSetClock: TButton;
+    btnHRSReadTAG: TButton;
+    btFidIncrementa: TButton;
     Edit2: TEdit;
     Edit3: TEdit;
     Edit4: TEdit;
@@ -115,7 +115,7 @@ type
     Label25: TLabel;
     ComboBox2: TComboBox;
     Label26: TLabel;
-    Button13: TButton;
+    btnLeEncerrante2: TButton;
     GroupBox4: TGroupBox;
     Label31: TLabel;
     Edit18: TEdit;
@@ -124,7 +124,7 @@ type
     Edit19: TEdit;
     Panel9: TPanel;
     RadioButton9: TRadioButton;
-    Button23: TButton;
+    btnComunica: TButton;
     ComboBox3: TComboBox;
     Label33: TLabel;
     Shape1: TShape;
@@ -134,9 +134,9 @@ type
     Edit20: TEdit;
     Button24: TButton;
     Button25: TButton;
-    Button27: TButton;
+    btnLeStatusFid: TButton;
     TabSheet12: TTabSheet;
-    LeFid: TButton;
+    btnLeAbastecimentoFid: TButton;
     Label35: TLabel;
     EditTag: TEdit;
     TabSheet13: TTabSheet;
@@ -146,18 +146,18 @@ type
     Label36: TLabel;
     Label37: TLabel;
     Edit21: TEdit;
-    Button29: TButton;
+    btnLeEvento: TButton;
     Edit22: TEdit;
     TabSheet14: TTabSheet;
     Edit23: TEdit;
     Label38: TLabel;
-    Button30: TButton;
-    Button31: TButton;
+    btnInicializaSocket2: TButton;
+    btnFechaSocket: TButton;
     Panel8: TPanel;
     RadioButton6: TRadioButton;
     RadioButton7: TRadioButton;
-    Button32: TButton;
-    Button34: TButton;
+    btnSocketOpen: TButton;
+    btnLeStStatus2: TButton;
     TabSheet15: TTabSheet;
     Edit26: TEdit;
     Button35: TButton;
@@ -181,32 +181,32 @@ type
     Edit33: TEdit;
     Label44: TLabel;
     Label45: TLabel;
-    Button42: TButton;
+    btnLeAbastecimentoFid2: TButton;
     TabSheet18: TTabSheet;
     Memo8: TMemo;
-    Button43: TButton;
+    btnLeAbastecimentoPAF2: TButton;
     TabSheet19: TTabSheet;
     Button44: TButton;
     Button45: TButton;
     Button46: TButton;
     Edit34: TEdit;
-    Button47: TButton;
-    Button48: TButton;
+    btnLeAbastecimentoPAF1Fix: TButton;
+    btnHRSReadTAG_2: TButton;
     Memo9: TMemo;
     savetagFidpage: TTabSheet;
-    Button51: TButton;
+    btnLeAbastecimentoTWC: TButton;
     GroupBox9: TGroupBox;
     Edt_TagBlackList: TEdit;
-    Btn_RemoveBlackList: TButton;
-    Btn_BlackListClear: TButton;
-    Btn_AddBlackList: TButton;
+    btnPopBlackList: TButton;
+    btnClearBlackList: TButton;
+    btnPushBlackList: TButton;
     Edt_BlackListResult: TEdit;
     Label47: TLabel;
     Label48: TLabel;
     Label49: TLabel;
-    Button53: TButton;
+    btnC_GetSalePaf: TButton;
     Edit28: TEdit;
-    Button52: TButton;
+    btnLeAbastecimentoPAFReg: TButton;
     CheckBox1: TCheckBox;
     Edit35: TEdit;
     Edit36: TEdit;
@@ -215,12 +215,12 @@ type
     Edt_ResultSaveTag: TEdit;
     Label46: TLabel;
     Edt_Tag: TEdit;
-    Btn_SaveTag: TButton;
+    btnsavetagFid: TButton;
     RadioGroup1: TRadioGroup;
     ChangePrice: TTabSheet;
     GroupBox11: TGroupBox;
     Memo10: TMemo;
-    Button38: TButton;
+    btnGetIdentTag: TButton;
     GroupBox3: TGroupBox;
     Label27: TLabel;
     Label28: TLabel;
@@ -228,24 +228,24 @@ type
     Label30: TLabel;
     Edit15: TEdit;
     Edit16: TEdit;
-    Button21: TButton;
+    btnSetPrice: TButton;
     Edit17: TEdit;
     SpinEdit3: TSpinEdit;
     Edit14: TEdit;
-    Button40: TButton;
+    btnSendReceiveText: TButton;
     GroupBox13: TGroupBox;
     Label52: TLabel;
     Label54: TLabel;
     Label55: TLabel;
     Edit38: TEdit;
     Edit39: TEdit;
-    Button54: TButton;
+    btnAlteraPrecoNivel: TButton;
     Edit40: TEdit;
     GroupBox14: TGroupBox;
     Label57: TLabel;
     Label58: TLabel;
     Edit42: TEdit;
-    Button55: TButton;
+    btnLePPLNivel: TButton;
     SpinEdit6: TSpinEdit;
     Label56: TLabel;
     Edit41: TEdit;
@@ -262,9 +262,9 @@ type
     Label40: TLabel;
     Edit24: TEdit;
     Edit25: TEdit;
-    Button33: TButton;
+    btnLePPL: TButton;
     grpLeituraCartao: TGroupBox;
-    btnLeituraCartao: TButton;
+    btnFidLeRegistro: TButton;
     edtLeituraCartao: TEdit;
     lblLeituraCartao: TLabel;
     lblRetorno: TLabel;
@@ -277,14 +277,14 @@ type
     lbl_valor: TLabel;
     edt_valorPreset: TEdit;
     Button59: TButton;
-    btn_preset: TButton;
+    btnPreset: TButton;
     lbl_retorno: TLabel;
     edt_retorno: TEdit;
     lbl_valorId: TLabel;
     edt_valorId: TEdit;
     lbl_respostaId: TLabel;
     edt_respostaId: TEdit;
-    btn_enviaPresetId: TButton;
+    btnpresetIdf: TButton;
     lbl_bico: TLabel;
     edt_bico: TEdit;
     lbl_bicoId: TLabel;
@@ -298,15 +298,15 @@ type
     edt_tempo: TEdit;
     timer1: TTimer;
     memoVisualizacaoIdentificada: TMemo;
-    btnVisualizacaoIdentificada: TButton;
+    btnGetVisualizacaoId: TButton;
     tsRelogio: TTabSheet;
     grpRelogio: TGroupBox;
     lblResposta: TLabel;
-    btnLeituraRelogio: TButton;
-    btnAtualizaRelogio: TButton;
+    btnC_GetClock: TButton;
+    btnC_SetClock: TButton;
     edtResposta: TEdit;
     grpRelogioExtendido: TGroupBox;
-    btnAtualizarRelogioExtendido: TButton;
+    btnSetExtendedWatch: TButton;
     edtAno: TEdit;
     edtMes: TEdit;
     edtDia: TEdit;
@@ -323,16 +323,16 @@ type
     lblSegundo: TLabel;
     edtRespostaRelogioEstendido: TEdit;
     lblRespostaRelogioEstendido: TLabel;
-    btnFidIncrementa: TButton;
+    btnC_IncrementIdf: TButton;
     TabSheet20: TTabSheet;
-    btn_SendCommandReadPointersMemory: TButton;
+    btnGetMemoryPointers: TButton;
     edt_AnswerWritePointerMemory: TEdit;
     Label51: TLabel;
     edt_AnswerReadPointerMemory: TEdit;
     Label62: TLabel;
     TabSheet21: TTabSheet;
     memo_AbastPaf1: TMemo;
-    btn_ReadSalePaf1: TButton;
+    btnLeAbastecimentoPAF1: TButton;
     GroupBox12: TGroupBox;
     Label63: TLabel;
     Label64: TLabel;
@@ -344,59 +344,59 @@ type
     Edit46: TEdit;
     SpinEdit8: TSpinEdit;
     SpinEdit9: TSpinEdit;
-    Button26: TButton;
+    btnAlteraPrecoEstendidoNivel: TButton;
     gb_ConsultaCodigoVirgula: TGroupBox;
     edt_BicoConsultaCodigoVirgula: TEdit;
     Label68: TLabel;
     edt_RespostaConsultaCodigoVirgula: TEdit;
     Label69: TLabel;
-    btn_EnviaConsultaCodigoVirgula: TButton;
+    btnConsultaCodigoVirgulaPPL: TButton;
     TabSheet22: TTabSheet;
     memo_ReadExtendedSale: TMemo;
-    btn_ReadExtendedSale: TButton;
+    btnLeAbastecimentoEstendido: TButton;
     GroupBox15: TGroupBox;
     Label70: TLabel;
     Label71: TLabel;
     edt_TagDeleteIDF: TEdit;
     edt_ResultDeleteIDF: TEdit;
-    btn_DeleteIDF: TButton;
+    btndeleteTagFid: TButton;
     edt_PositionDeleteIDF: TEdit;
     Label72: TLabel;
     function ErrorToString(Erro: Error): string;
-    procedure Button1Click(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
-    procedure Button3Click(Sender: TObject);
-    procedure Button4Click(Sender: TObject);
-    procedure Button9Click(Sender: TObject);
+    procedure btnInicializaSerialClick(Sender: TObject);
+    procedure btnFechaSerialClick(Sender: TObject);
+    procedure btnPortOpenClick(Sender: TObject);
+    procedure btnLeAbastecimentoClick(Sender: TObject);
+    procedure btnLeRegistroClick(Sender: TObject);
     procedure Button5Click(Sender: TObject);
-    procedure Button7Click(Sender: TObject);
+    procedure btnLeAbFixClick(Sender: TObject);
     procedure Button8Click(Sender: TObject);
-    procedure Button6Click(Sender: TObject);
-    procedure Button10Click(Sender: TObject);
-    procedure Button11Click(Sender: TObject);
-    procedure Button12Click(Sender: TObject);
-    procedure Button14Click(Sender: TObject);
-    procedure Button15Click(Sender: TObject);
-    procedure Button16Click(Sender: TObject);
-    procedure Button17Click(Sender: TObject);
-    procedure Button18Click(Sender: TObject);
-    procedure Button19Click(Sender: TObject);
-    procedure Button20Click(Sender: TObject);
-    procedure Button13Click(Sender: TObject);
-    procedure Button21Click(Sender: TObject);
+    procedure btnLeVisualizacaoClick(Sender: TObject);
+    procedure btnSTVisualizacaoClick(Sender: TObject);
+    procedure btnLeStatusClick(Sender: TObject);
+    procedure btnLeStStatusClick(Sender: TObject);
+    procedure btnFidIdentClick(Sender: TObject);
+    procedure btnFidStatusClick(Sender: TObject);
+    procedure btnFidModoClick(Sender: TObject);
+    procedure btnFidAcionaClick(Sender: TObject);
+    procedure btnFidSetClockClick(Sender: TObject);
+    procedure btnHRSReadTAGClick(Sender: TObject);
+    procedure btFidIncrementaClick(Sender: TObject);
+    procedure btnLeEncerrante2Click(Sender: TObject);
+    procedure btnSetPriceClick(Sender: TObject);
     procedure Button22Click(Sender: TObject);
-    procedure Button23Click(Sender: TObject);
+    procedure btnComunicaClick(Sender: TObject);
     procedure Button24Click(Sender: TObject);
     procedure Button25Click(Sender: TObject);
-    procedure LeFidClick(Sender: TObject);
-    procedure Button27Click(Sender: TObject);
+    procedure btnLeAbastecimentoFidClick(Sender: TObject);
+    procedure btnLeStatusFidClick(Sender: TObject);
     procedure Button28Click(Sender: TObject);
-    procedure Button29Click(Sender: TObject);
-    procedure Button30Click(Sender: TObject);
-    procedure Button31Click(Sender: TObject);
-    procedure Button32Click(Sender: TObject);
-    procedure Button33Click(Sender: TObject);
-    procedure Button34Click(Sender: TObject);
+    procedure btnLeEventoClick(Sender: TObject);
+    procedure btnInicializaSocket2Click(Sender: TObject);
+    procedure btnFechaSocketClick(Sender: TObject);
+    procedure btnSocketOpenClick(Sender: TObject);
+    procedure btnLePPLClick(Sender: TObject);
+    procedure btnLeStStatus2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Button35Click(Sender: TObject);
     procedure Button36Click(Sender: TObject);
@@ -404,40 +404,40 @@ type
     // procedure Button38Click(Sender: TObject);
     procedure Button39Click(Sender: TObject);
     procedure Button41Click(Sender: TObject);
-    procedure Button42Click(Sender: TObject);
-    procedure Button43Click(Sender: TObject);
+    procedure btnLeAbastecimentoFid2Click(Sender: TObject);
+    procedure btnLeAbastecimentoPAF2Click(Sender: TObject);
     procedure Button44Click(Sender: TObject);
     procedure Button45Click(Sender: TObject);
     procedure Button46Click(Sender: TObject);
-    procedure Button48Click(Sender: TObject);
-    procedure Button38Click(Sender: TObject);
-    procedure Btn_SaveTagClick(Sender: TObject);
-    procedure Button51Click(Sender: TObject);
-    procedure Btn_AddBlackListClick(Sender: TObject);
-    procedure Btn_RemoveBlackListClick(Sender: TObject);
-    procedure Btn_BlackListClearClick(Sender: TObject);
-    procedure Button53Click(Sender: TObject);
+    procedure btnHRSReadTAG_2Click(Sender: TObject);
+    procedure btnGetIdentTagClick(Sender: TObject);
+    procedure btnsavetagFidClick(Sender: TObject);
+    procedure btnLeAbastecimentoTWCClick(Sender: TObject);
+    procedure btnPushBlackListClick(Sender: TObject);
+    procedure btnPopBlackListClick(Sender: TObject);
+    procedure btnClearBlackListClick(Sender: TObject);
+    procedure btnC_GetSalePafClick(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     Procedure MeuTimerOnTimer(Sender: TObject);
-    procedure Button55Click(Sender: TObject);
-    procedure Button52Click(Sender: TObject);
+    procedure btnLePPLNivelClick(Sender: TObject);
+    procedure btnLeAbastecimentoPAFRegClick(Sender: TObject);
     procedure CheckBox1Click(Sender: TObject);
-    procedure Button40Click(Sender: TObject);
-    procedure Button54Click(Sender: TObject);
-    procedure btn_enviaPresetIdClick(Sender: TObject);
-    procedure btn_presetClick(Sender: TObject);
-    procedure btnLeituraCartaoClick(Sender: TObject);
-    procedure btnVisualizacaoIdentificadaClick(Sender: TObject);
-    procedure btnLeituraRelogioClick(Sender: TObject);
-    procedure btnAtualizaRelogioClick(Sender: TObject);
-    procedure btnAtualizarRelogioExtendidoClick(Sender: TObject);
-    procedure btnFidIncrementaClick(Sender: TObject);
-    procedure btn_SendCommandReadPointersMemoryClick(Sender: TObject);
-    procedure btn_ReadSalePaf1Click(Sender: TObject);
-    procedure Button26Click(Sender: TObject);
-    procedure btn_EnviaConsultaCodigoVirgulaClick(Sender: TObject);
-    procedure btn_ReadExtendedSaleClick(Sender: TObject);
-    procedure btn_DeleteIDFClick(Sender: TObject);
+    procedure btnSendReceiveTextClick(Sender: TObject);
+    procedure btnAlteraPrecoNivelClick(Sender: TObject);
+    procedure btnpresetIdfClick(Sender: TObject);
+    procedure btnPresetClick(Sender: TObject);
+    procedure btnFidLeRegistroClick(Sender: TObject);
+    procedure btnGetVisualizacaoIdClick(Sender: TObject);
+    procedure btnC_GetClockClick(Sender: TObject);
+    procedure btnC_SetClockClick(Sender: TObject);
+    procedure btnSetExtendedWatchClick(Sender: TObject);
+    procedure btnC_IncrementIdfClick(Sender: TObject);
+    procedure btnGetMemoryPointersClick(Sender: TObject);
+    procedure btnLeAbastecimentoPAF1Click(Sender: TObject);
+    procedure btnAlteraPrecoEstendidoNivelClick(Sender: TObject);
+    procedure btnConsultaCodigoVirgulaPPLClick(Sender: TObject);
+    procedure btnLeAbastecimentoEstendidoClick(Sender: TObject);
+    procedure btndeleteTagFidClick(Sender: TObject);
 
     // procedure Button47Click(Sender: TObject);
     // procedure Button48Click(Sender: TObject);
@@ -457,44 +457,44 @@ implementation
 // ------------------------------------------------------------------------------
 // Conectar serial                                                              -
 // ------------------------------------------------------------------------------
-procedure TForm1.Button1Click(Sender: TObject);
+procedure TForm1.btnInicializaSerialClick(Sender: TObject);
 begin
   RadioButton1.Checked := InicializaSerial(SpinEdit1.value);
   RadioButton2.Checked := not RadioButton1.Checked;
-  Button1.Enabled := not RadioButton1.Checked;
-  Button2.Enabled := not Button1.Enabled;
+  btnInicializaSerial.Enabled := not RadioButton1.Checked;
+  btnFechaSerial.Enabled := not   btnInicializaSerial.Enabled;
 end;
 
 // ------------------------------------------------------------------------------
 // Fechar conexão serial                                                        -
 // ------------------------------------------------------------------------------
-procedure TForm1.Button2Click(Sender: TObject);
+procedure TForm1.btnFechaSerialClick(Sender: TObject);
 begin
   if FechaSerial <> 0 then
     RadioButton1.Checked := true
   else
     RadioButton1.Checked := false;
   RadioButton2.Checked := not RadioButton1.Checked;
-  Button1.Enabled := not RadioButton1.Checked;
-  Button2.Enabled := not Button1.Enabled;
+  btnInicializaSerial.Enabled := not RadioButton1.Checked;
+  btnFechaSerial.Enabled := not   btnInicializaSerial.Enabled;
 end;
 
 // ------------------------------------------------------------------------------
 // Consultar serial                                                             -
 // ------------------------------------------------------------------------------
-procedure TForm1.Button3Click(Sender: TObject);
+procedure TForm1.btnPortOpenClick(Sender: TObject);
 begin
   RadioButton1.Checked := PortOpen;
   RadioButton2.Checked := not RadioButton1.Checked;
-  Button1.Enabled := not RadioButton1.Checked;
-  Button2.Enabled := not Button1.Enabled;
+  btnInicializaSerial.Enabled := not RadioButton1.Checked;
+  btnFechaSerial.Enabled := not btnInicializaSerial.Enabled;
 
   end;
 
 // ------------------------------------------------------------------------------
 // Lê abastecimento                                                             -
 // ------------------------------------------------------------------------------
-procedure TForm1.Button4Click(Sender: TObject);
+procedure TForm1.btnLeAbastecimentoClick(Sender: TObject);
 var
   ab: abast;
 begin
@@ -518,7 +518,7 @@ end;
 // ------------------------------------------------------------------------------
 // Lê regitro através do número passado                                         -
 // ------------------------------------------------------------------------------
-procedure TForm1.Button9Click(Sender: TObject);
+procedure TForm1.btnLeRegistroClick(Sender: TObject);
 var
   ab: abast;
 begin
@@ -553,7 +553,7 @@ end;
 
 procedure TForm1.Timer1Timer(Sender: TObject);
 begin
-  Button4Click(Sender);
+  //Button4Click(Sender);
   Incrementa;
 end;
 
@@ -561,7 +561,7 @@ end;
 // ------------------------------------------------------------------------------
 // Lê abastecimento TWC                                                         -
 // ------------------------------------------------------------------------------
-procedure TForm1.Button51Click(Sender: TObject);
+procedure TForm1.btnLeAbastecimentoTWCClick(Sender: TObject);
 var
   ab: AbastTWC;
   str: string;
@@ -592,9 +592,9 @@ end;
 // ------------------------------------------------------------------------------
 // Lê registro através do número passado e retorna a string em PAF              -
 // ------------------------------------------------------------------------------
-procedure TForm1.Button52Click(Sender: TObject);
+procedure TForm1.btnLeAbastecimentoPAFRegClick(Sender: TObject);
 var
-  ab: AbastPAF2;
+  ab: AbastPAF1;
   str: string;
   flt: double;
   myHour, myMin, mySec, myMilli: Word;
@@ -623,7 +623,7 @@ end;
 // ------------------------------------------------------------------------------
 // Lê abastecimento PAF em C                                                    -
 // ------------------------------------------------------------------------------
-procedure TForm1.Button53Click(Sender: TObject);
+procedure TForm1.btnC_GetSalePafClick(Sender: TObject);
 var
   ab: PAnsiChar;
 begin
@@ -636,7 +636,7 @@ end;
 // ------------------------------------------------------------------------------
 // Altera preço por nível                                                       -
 // ------------------------------------------------------------------------------
-procedure TForm1.Button54Click(Sender: TObject);
+procedure TForm1.btnAlteraPrecoNivelClick(Sender: TObject);
 var
   bico, preco: AnsiString;
   nivel, decimals: Integer;
@@ -657,7 +657,7 @@ end;
 // ------------------------------------------------------------------------------
 // Lê preço por litro através dos níveis                                        -
 // ------------------------------------------------------------------------------
-procedure TForm1.Button55Click(Sender: TObject);
+procedure TForm1.btnLePPLNivelClick(Sender: TObject);
 var
   resposta: ShortString;
   nivel: Integer;
@@ -676,7 +676,7 @@ end;
 // ------------------------------------------------------------------------------
 Procedure TForm1.MeuTimerOnTimer(Sender: TObject);
 begin
-  Button4.Click();
+  //Button4.Click();
 end;
 
 // ------------------------------------------------------------------------------
@@ -714,7 +714,7 @@ end;
 // ------------------------------------------------------------------------------
 // Lê abastecimento Fix                                                         -
 // ------------------------------------------------------------------------------
-procedure TForm1.Button7Click(Sender: TObject);
+procedure TForm1.btnLeAbFixClick(Sender: TObject);
 var
   ab: abast;
 begin
@@ -770,7 +770,7 @@ end;
 // ------------------------------------------------------------------------------
 // Visualização dos abastecimentos em andamento                                 -
 // ------------------------------------------------------------------------------
-procedure TForm1.Button6Click(Sender: TObject);
+procedure TForm1.btnLeVisualizacaoClick(Sender: TObject);
 var
   ol: online;
   a: byte;
@@ -784,7 +784,7 @@ end;
 // ------------------------------------------------------------------------------
 // Adiciona cartão a lista negra                                                -
 // ------------------------------------------------------------------------------
-procedure TForm1.btnLeituraCartaoClick(Sender: TObject);
+procedure TForm1.btnFidLeRegistroClick(Sender: TObject);
 var
   indice: Integer;
   resposta: ShortString;
@@ -809,7 +809,7 @@ begin
 
 end;
 
-procedure TForm1.btnVisualizacaoIdentificadaClick(Sender: TObject);
+procedure TForm1.btnGetVisualizacaoIdClick(Sender: TObject);
 var
   stvis: ShortString;
 begin
@@ -818,7 +818,7 @@ begin
   memoVisualizacaoIdentificada.Lines.Add(stvis);
 end;
 
-procedure TForm1.Btn_AddBlackListClick(Sender: TObject);
+procedure TForm1.btnPushBlackListClick(Sender: TObject);
 var
   tag: AnsiString;
   retorno: bool;
@@ -844,7 +844,7 @@ end;
 // ------------------------------------------------------------------------------
 // Limpa lista negra                                                            -
 // ------------------------------------------------------------------------------
-procedure TForm1.Btn_BlackListClearClick(Sender: TObject);
+procedure TForm1.btnClearBlackListClick(Sender: TObject);
 var
   retorno: bool;
 begin
@@ -864,7 +864,7 @@ end;
 // ------------------------------------------------------------------------------
 // Consulta codigo de virgula                                                   -
 // ------------------------------------------------------------------------------
-procedure TForm1.btn_EnviaConsultaCodigoVirgulaClick(Sender: TObject);
+procedure TForm1.btnConsultaCodigoVirgulaPPLClick(Sender: TObject);
 var
   bico: AnsiString;
   retorno: integer;
@@ -876,7 +876,7 @@ end;
 // ------------------------------------------------------------------------------
 // Envia preset identificado                                                    -
 // ------------------------------------------------------------------------------
-procedure TForm1.btn_enviaPresetIdClick(Sender: TObject);
+procedure TForm1.btnpresetIdfClick(Sender: TObject);
 var
   bico: Byte;
   tag, retorno: AnsiString;
@@ -910,7 +910,7 @@ begin
 
 end;
 
-procedure TForm1.btn_presetClick(Sender: TObject);
+procedure TForm1.btnPresetClick(Sender: TObject);
 var
   bico:Byte;
   value: PChar;
@@ -923,7 +923,7 @@ begin
   edt_retorno.Text := erro;
 end;
 
-procedure TForm1.btn_ReadExtendedSaleClick(Sender: TObject);
+procedure TForm1.btnLeAbastecimentoEstendidoClick(Sender: TObject);
 var
   ab: AbastEstendido;
 begin
@@ -937,7 +937,7 @@ end;
 // ------------------------------------------------------------------------------
 // PAF1                                                                         -
 // ------------------------------------------------------------------------------
-procedure TForm1.btn_ReadSalePaf1Click(Sender: TObject);
+procedure TForm1.btnLeAbastecimentoPAF1Click(Sender: TObject);
 var
   ab: AbastPAF1;
 begin
@@ -1015,7 +1015,7 @@ end;
 // ------------------------------------------------------------------------------
 // Remove cartão da lista negra                                                 -
 // ------------------------------------------------------------------------------
-procedure TForm1.Btn_RemoveBlackListClick(Sender: TObject);
+procedure TForm1.btnPopBlackListClick(Sender: TObject);
 var
   tag: AnsiString;
   retorno: bool;
@@ -1042,7 +1042,7 @@ end;
 // ------------------------------------------------------------------------------
 // Cadastra cartãoes na memória da automação                                    -
 // ------------------------------------------------------------------------------
-procedure TForm1.Btn_SaveTagClick(Sender: TObject);
+procedure TForm1.btnsavetagFidClick(Sender: TObject);
 var
   tag: AnsiString;
   perm1: char;
@@ -1081,7 +1081,7 @@ end;
 // ------------------------------------------------------------------------------
 // Exclusão de cartão idf                                                       -
 // ------------------------------------------------------------------------------
-procedure TForm1.btn_DeleteIDFClick(Sender: TObject);
+procedure TForm1.btndeleteTagFidClick(Sender: TObject);
 var
   tag: AnsiString;
   position: integer;
@@ -1100,7 +1100,7 @@ end;
 // ------------------------------------------------------------------------------
 //  -
 // ------------------------------------------------------------------------------
-procedure TForm1.btn_SendCommandReadPointersMemoryClick(Sender: TObject);
+procedure TForm1.btnGetMemoryPointersClick(Sender: TObject);
 var
   answer: MemoryPointers;
 begin
@@ -1111,7 +1111,7 @@ end;
 // ------------------------------------------------------------------------------
 // Visualização retornando a string inteira                                     -
 // ------------------------------------------------------------------------------
-procedure TForm1.Button10Click(Sender: TObject);
+procedure TForm1.btnSTVisualizacaoClick(Sender: TObject);
 var
   stvis: ShortString;
 begin
@@ -1122,7 +1122,7 @@ end;
 // ------------------------------------------------------------------------------
 // Lê status dos bicos das bombas                                               -
 // ------------------------------------------------------------------------------
-procedure TForm1.Button11Click(Sender: TObject);
+procedure TForm1.btnLeStatusClick(Sender: TObject);
 var
   ms: multistatus;
   a: byte;
@@ -1153,7 +1153,7 @@ end;
 // ------------------------------------------------------------------------------
 // Lê status dos bicos das bombas e retornar a string inteira                   -
 // ------------------------------------------------------------------------------
-procedure TForm1.Button12Click(Sender: TObject);
+procedure TForm1.btnLeStStatusClick(Sender: TObject);
 begin
   Edit1.Text := LeStStatus.value;
 end;
@@ -1161,7 +1161,7 @@ end;
 // ------------------------------------------------------------------------------
 // Lê identificador do buffer                                                   -
 // ------------------------------------------------------------------------------
-procedure TForm1.Button14Click(Sender: TObject);
+procedure TForm1.btnFidIdentClick(Sender: TObject);
 var
   rta: IFid;
 begin
@@ -1175,7 +1175,7 @@ end;
 // ------------------------------------------------------------------------------
 // Status dos sensores IDF                                                      -
 // ------------------------------------------------------------------------------
-procedure TForm1.Button15Click(Sender: TObject);
+procedure TForm1.btnFidStatusClick(Sender: TObject);
 var
   rta: StFid;
 begin
@@ -1186,7 +1186,7 @@ end;
 // ------------------------------------------------------------------------------
 // Lê modo do identificador                                                     -
 // ------------------------------------------------------------------------------
-procedure TForm1.Button16Click(Sender: TObject);
+procedure TForm1.btnFidModoClick(Sender: TObject);
 begin
   RadioButton3.Checked := false;
   if FidModo(Edit4.Text, ComboBox1.Text[1]) = 1 then
@@ -1198,7 +1198,7 @@ end;
 // ------------------------------------------------------------------------------
 // Acionamento do identificador                                                 -
 // ------------------------------------------------------------------------------
-procedure TForm1.Button17Click(Sender: TObject);
+procedure TForm1.btnFidAcionaClick(Sender: TObject);
 begin
   if FidAciona(Edit5.Text, StrToInt(Edit5.Text), StrToInt(Edit7.Text)) = 1 then
     RadioButton4.Checked := true
@@ -1209,7 +1209,7 @@ end;
 // ------------------------------------------------------------------------------
 // Seta relógio                                                                 -
 // ------------------------------------------------------------------------------
-procedure TForm1.Button18Click(Sender: TObject);
+procedure TForm1.btnFidSetClockClick(Sender: TObject);
 begin
   if FidSetClock(StrToInt(Edit8.Text), StrToInt(Edit9.Text),
     StrToInt(Edit10.Text)) = 1 then
@@ -1221,7 +1221,7 @@ end;
 // ------------------------------------------------------------------------------
 // Lê idf da memória através do índice                                          -
 // ------------------------------------------------------------------------------
-procedure TForm1.Button19Click(Sender: TObject);
+procedure TForm1.btnHRSReadTAGClick(Sender: TObject);
 var
   indice: Integer;
   tag: AnsiString;
@@ -1238,7 +1238,7 @@ end;
 // ------------------------------------------------------------------------------
 // Incremento de ponteiro de identificador                                      -
 // ------------------------------------------------------------------------------
-procedure TForm1.Button20Click(Sender: TObject);
+procedure TForm1.btFidIncrementaClick(Sender: TObject);
 begin
   FidIncrementa;
 end;
@@ -1246,7 +1246,7 @@ end;
 // ------------------------------------------------------------------------------
 // Lê encerrante                                                                -
 // ------------------------------------------------------------------------------
-procedure TForm1.Button13Click(Sender: TObject);
+procedure TForm1.btnLeEncerrante2Click(Sender: TObject);
 var
 
   str: string;
@@ -1280,7 +1280,7 @@ end;
 // ------------------------------------------------------------------------------
 //                                      -
 // ------------------------------------------------------------------------------
-procedure TForm1.Button21Click(Sender: TObject);
+procedure TForm1.btnSetPriceClick(Sender: TObject);
 var
   Erro: Error;
   cb: byte;
@@ -1333,7 +1333,7 @@ begin
 
 end;
 
-procedure TForm1.Button23Click(Sender: TObject);
+procedure TForm1.btnComunicaClick(Sender: TObject);
 begin
   RadioButton9.Checked := Comunica;
 end;
@@ -1348,7 +1348,7 @@ begin
   Edit20.Text := LeStStatus2;
 end;
 
-procedure TForm1.Button26Click(Sender: TObject);
+procedure TForm1.btnAlteraPrecoEstendidoNivelClick(Sender: TObject);
 var
   bico, preco: AnsiString;
   nivel, decimals: Integer;
@@ -1364,7 +1364,7 @@ begin
   Edit45.Text := ErrorToString(Erro);
 end;
 
-procedure TForm1.LeFidClick(Sender: TObject);
+procedure TForm1.btnLeAbastecimentoFidClick(Sender: TObject);
 var
   ab: abastFid;
 begin
@@ -1385,7 +1385,7 @@ begin
   value.Checked := ab.value;
 end;
 
-procedure TForm1.Button27Click(Sender: TObject);
+procedure TForm1.btnLeStatusFidClick(Sender: TObject);
 var
   ms: multistatus;
   a: byte;
@@ -1434,7 +1434,7 @@ begin
 end;
 
 // ------------------------------------------------------------------------------
-procedure TForm1.Button29Click(Sender: TObject);
+procedure TForm1.btnLeEventoClick(Sender: TObject);
 begin
   Edit22.Text := LeEvento(StrToInt(Edit21.Text));
 end;
@@ -1442,7 +1442,7 @@ end;
 // ------------------------------------------------------------------------------
 // Botão para conectar ethernet enviando ip e porta                           -
 // ------------------------------------------------------------------------------
-procedure TForm1.Button30Click(Sender: TObject);
+procedure TForm1.btnInicializaSocket2Click(Sender: TObject);
 var
   ip: AnsiString;
 begin
@@ -1452,14 +1452,14 @@ begin
 //    if InicializaSocket(Edit23.Text) then
     begin
       RadioButton6.Checked := true;
-      Button30.Enabled := false;
-      Button31.Enabled := true;
+      btnInicializaSocket2.Enabled := false;
+      btnFechaSocket.Enabled := true;
     end
     else
     begin
       RadioButton7.Checked := true;
-      Button31.Enabled := false;
-      Button30.Enabled := true;
+      btnFechaSocket.Enabled := false;
+      btnInicializaSocket2.Enabled := true;
     end;
   except on E : Exception do
       ShowMessage(E.ClassName+' razão do erro, messagem : '+E.Message);
@@ -1469,31 +1469,31 @@ end;
 // ------------------------------------------------------------------------------
 //Botão para desconectar ethernet                                               -
 // ------------------------------------------------------------------------------
-procedure TForm1.Button31Click(Sender: TObject);
+procedure TForm1.btnFechaSocketClick(Sender: TObject);
 begin
   if FechaSocket then
   begin
      RadioButton7.Checked := true;
-     button30.Enabled := True;
-     Button31.Enabled := False;
+     btnInicializaSocket2.Enabled := True;
+     btnFechaSocket.Enabled := False;
   end
   else
   begin
     RadioButton6.Checked := true;
-    Button31.Enabled := True;
-    Button30.Enabled := False;
+    btnFechaSocket.Enabled := True;
+    btnInicializaSocket2.Enabled := False;
   end;
 end;
 
-procedure TForm1.Button32Click(Sender: TObject);
+procedure TForm1.btnSocketOpenClick(Sender: TObject);
 begin
   RadioButton6.Checked := SocketOpen;
   RadioButton7.Checked := not RadioButton6.Checked;
-  Button30.Enabled := not RadioButton6.Checked;
-  Button31.Enabled := not Button30.Enabled;
+  btnInicializaSocket2.Enabled := not RadioButton6.Checked;
+  btnFechaSocket.Enabled := not btnInicializaSocket2.Enabled;
 end;
 
-procedure TForm1.Button33Click(Sender: TObject);
+procedure TForm1.btnLePPLClick(Sender: TObject);
 var
   st: ShortString;
 begin
@@ -1502,7 +1502,7 @@ begin
   Edit25.Text := floattostr(LePPL(st));
 end;
 
-procedure TForm1.Button34Click(Sender: TObject);
+procedure TForm1.btnLeStStatus2Click(Sender: TObject);
 var
   st: string;
 begin
@@ -1516,8 +1516,8 @@ begin
   // height:=600;
   PageControl2.ActivePageIndex := 0;
   RadioButton7.Checked := true;
-  Button31.Enabled := false;
-  Button30.Enabled := true;
+  btnFechaSocket.Enabled := false;
+  btnInicializaSocket2.Enabled := true;
   Form1.Caption := 'Companytec Automação e Controle - Desenvolvimento de Software - Teste DLL Vr 1.3.0';
 end;
 
@@ -1545,7 +1545,7 @@ begin
   Edit20.Text := rta;
 end;
 
-procedure TForm1.Button38Click(Sender: TObject);
+procedure TForm1.btnGetIdentTagClick(Sender: TObject);
 var
   str: ShortString;
   pdata: pchar;
@@ -1623,7 +1623,7 @@ begin
   value.Checked := ab.value;
 end;
 
-procedure TForm1.Button40Click(Sender: TObject);
+procedure TForm1.btnSendReceiveTextClick(Sender: TObject);
 //---------------------------------------------------------
 //função antiga e que funciona
 var
@@ -1655,7 +1655,7 @@ begin
   Edit31.Text := rta;
 end;
 
-procedure TForm1.Button42Click(Sender: TObject);
+procedure TForm1.btnLeAbastecimentoFid2Click(Sender: TObject);
 var
   ab: AbastFid2;
 begin
@@ -1729,7 +1729,7 @@ end;
 // FUNÇÂO PRECISA SER ENVIADO UM COMANDO DE INCREMENTO PARA QUE SEJA FEITA A
 // LEITURA DE OUTRO ABASTECIMENTO
 
-procedure TForm1.Button43Click(Sender: TObject);
+procedure TForm1.btnLeAbastecimentoPAF2Click(Sender: TObject);
 var
   ab: AbastPAF2;
   str: string;
@@ -1830,7 +1830,7 @@ begin
   FidIncrementaAbast;
 end;
 
-procedure TForm1.Button48Click(Sender: TObject);
+procedure TForm1.btnHRSReadTAG_2Click(Sender: TObject);
 var
   num: Integer;
   level: Integer;
@@ -1894,7 +1894,7 @@ end;
   leregistro3(1);
   end;
 }
-procedure TForm1.btnLeituraRelogioClick(Sender: TObject);
+procedure TForm1.btnC_GetClockClick(Sender: TObject);
 var
   st: PAnsiChar;
 begin
@@ -1902,7 +1902,7 @@ begin
   edtResposta.Text := st;
 end;
 
-procedure TForm1.btnAtualizaRelogioClick(Sender: TObject);
+procedure TForm1.btnC_SetClockClick(Sender: TObject);
 begin
    if (C_SetClock(AnsiString('AUTO'))) then
     edtResposta.Text := 'Sucesso'
@@ -1910,7 +1910,7 @@ begin
     edtResposta.Text := 'Falha!';
 end;
 
-procedure TForm1.btnAtualizarRelogioExtendidoClick(Sender: TObject);
+procedure TForm1.btnSetExtendedWatchClick(Sender: TObject);
 var
   stAno,stMes,stDia,stDiaSemana,stHora,stMinuto,stSegundo:string[2];
   retorno: boolean;
@@ -1932,7 +1932,7 @@ begin
 
 end;
 
-procedure TForm1.btnFidIncrementaClick(Sender: TObject);
+procedure TForm1.btnC_IncrementIdfClick(Sender: TObject);
 begin
   C_IncrementIdf;
 end;

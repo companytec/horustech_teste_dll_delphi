@@ -21,3 +21,7 @@
 ```
 - Ajustado o campo tipocbc da estrutura AbastPaf1 de char para AnsiChar na DLL e ajeitado o retorno do comando.
 ```
+### Versão 1.3.1 - 19/03/2026
+```
+- Comando LeAbastecimentoPAFReg estava como retorno o AbastPAF2, mas o correto é retornar o AbastPAF1.
+```
